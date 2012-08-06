@@ -18,90 +18,18 @@ With all relative font sizes now gone, I chose to let the type design itself. Th
 
 Fortunately, there is a [calculator online](http://www.pearsonified.com/typography/) for you to run through some tests and have a go for yourself. However, being a devotee of CSS preprocessor and good maintainability, I chose to leave these calculations until run time.
 
-    $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
+<script src="https://gist.github.com/3278139.js?file=_settings.scss"></script>
 
 This two dimension list provides me with two options: font size and breakpoint. My first breakpoint is 320px, for which I chose to serve a font size of 16px. This is followed by a breakpoint of 480px with a font size of 16px once again. Finally, I have three font sizes: 16px, 18px and 20px, all of which have no width restrictions.
 
-    @mixin type-set($set: $type-set) {
-      @each $step in $set {
-        $font-size: 0;
-        $line-height: 0;
-        $content-width: 0;
-        $breakpoint: 0;
-        $index: index($set, $step) - 1;
-        $unit: 0;
-        $padding: 0;
-        $container-width: 0;
-
-        @if (length($step) >= 1) {
-          $font-size: nth($step, 1);
-        }
-
-        $unit: golden-unit($font-size);
-        $content-padding: $font-size * 2;
-
-        @if (length($step) >= 2) {
-          $breakpoint: nth($step, 2);
-          $container-width: $breakpoint - (($breakpoint * 0.025) * 2);
-          $container-padding: ($breakpoint * 0.05) * 2;
-          $content-width: $container-width - $content-padding - $container-padding;
-
-          $line-height: golden-height-adjusted($content-width, $font-size);
-        } @else if ($breakpoint == 0) {
-          $line-height: golden-height($font-size);
-          $content-width: golden-width-adjusted($font-size, $line-height);
-
-          // The illusion of padding either side of the content is achieved by
-          // adding to the width of the content
-          $breakpoint: $content-width + $content-padding;
-          $container-padding: ($breakpoint * 0.1) * 2;
-          $breakpoint: $breakpoint + $container-padding;
-          $container-width: $breakpoint - (($breakpoint * 0.025) * 2);
-        }
-
-        @include breakpoint($breakpoint) {
-          @include type-system($font-size, $line-height, $content-width, $container-width, $index);
-        }
-      }
-    }
+<script src="https://gist.github.com/3278139.js?file=_type-set.scss"></script>
 
 When called, this mixin will loop through my `$type-set` list and run the golden ratio calculations through the [Golden Ratio Typography plugin for Compass](https://github.com/maxbeatty/goldentype). For list items with a breakpoint, the optimal line height is calculated, whereas for those without breakpoints, optimal line height and content width is calculated. On each iteration, a media query is defined - the breakpoint for which is calculated based on the optimal content width. Inside of this media query I make a call to another mixin called `type-system`.
 
-    @mixin type-system($font-size, $line-height, $content-width, $container-width, $index) {
-      body {
-        font-size: $font-size;
-        line-height: $line-height;
-      }
-
-      %text {
-        margin: {
-          top: $line-height;
-          bottom: $line-height;
-        };
-      }
-
-      .l-container {
-        max-width: $container-width;
-      }
-
-      .post-content {
-        width: $content-width;
-
-        // Okay. I go a bit crazy and also calculate the optimal line height for
-        // headings, because they have different font sizes but share the same
-        // content width. Thus, the optimal line height will be different.
-        h1 {
-          @include golden-text-adjusted($font-size * 2, $content-width);
-        }
-
-        h2 {
-          @include golden-text-adjusted($font-size * 1.5, $content-width);
-        }
-      }
-    }
+<script src="https://gist.github.com/3278139.js?file=_type-system.scss"></script>
 
 When called, this mixin receives the results of our previous calculations in the form of `$font-size`, `$line-height`, `$content-width` and `$container-width`. Last but not least, I can use these values in my CSS.
 
-    @include type-set();
+<script src="https://gist.github.com/3278139.js?file=base.scss"></script>
 
 Call the `type-set` mixin, and there we have it. No longer do I have to define arbitrary breakpoints based on my own assumptions. Using this method, my breakpoints are calculated using a theory, which is always going to beat my own personal judgement.

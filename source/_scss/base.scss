@@ -1,0 +1,59 @@
+@import "settings";
+@import "library";
+@import "aliases";
+
+// We don't want desktop styles, so we fix breakpoints at 320px.
+$fix-breakpoint: 320px;
+
+@import "foundations/reset";
+@import "foundations/normalise";
+@import "foundations/typography";
+@import "foundations/placeholders/styled-list";
+@import "foundations/placeholders/horizontal-list";
+@import "foundations/placeholders/centered";
+@import "foundations/modules/nav-list";
+@import "foundations/modules/island";
+@import "foundations/modules/post";
+
+@include type-set();
+
+body {
+  min-width: 320px;
+  background-color: hsl(0, 0%, 10%);
+}
+
+// Layout layer
+
+nav {
+  & > h1 {
+    display: none;
+  }
+}
+
+.l-container {
+  @extend %centered;
+}
+
+.l-header {
+  &, a {
+    color: white;
+  }
+}
+
+.l-header-logo {
+  text-align: center;
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.l-footer {
+  &, a {
+    color: hsl(0, 0%, 50%);
+  }
+}
+
+.l-archived-posts {
+  @extend %styled-list;
+}

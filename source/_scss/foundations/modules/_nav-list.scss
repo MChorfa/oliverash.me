@@ -1,0 +1,13 @@
+.nav-list {
+  @extend %horizontal-list;
+  text-align: center;
+
+  li {
+    margin-right: 1em;
+    font-weight: 600;
+  }
+
+  .last {
+    margin-right: 0;
+  }
+}

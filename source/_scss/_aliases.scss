@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %heading;
+}
+
+blockquote,
+p,
+pre,
+dl,
+menu,
+ol,
+ul,
+hr {
+  @extend %text;
+}
+
+.h1 { @extend h1; }
+.h2 { @extend h2; }
+.h3 { @extend h3; }
+.h4 { @extend h4; }
+.h5 { @extend h5; }
+.h6 { @extend h6; }

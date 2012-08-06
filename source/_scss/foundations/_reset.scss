@@ -1,0 +1,21 @@
+// Remove all margins from all text elements
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+p,
+pre,
+dl,
+menu,
+ol,
+ul,
+hr {
+  margin: 0;
+}
+
+hr {
+  border: 0;
+}

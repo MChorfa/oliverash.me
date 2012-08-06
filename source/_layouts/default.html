@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/screen.css" media="(min-width: 320px)">
+    <!--[if (lt IE 9) & (!IEMobile)]>
+      <link rel="stylesheet" href="css/screen-ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}Oliver Joseph Ash</title>
+    <script src="/js/modernizr-2.6.1.min.js"></script>
+    <script src="//use.typekit.net/qtb5goz.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  </head>
+  <body>
+    <div class="l-container">
+      <header class="l-header island">
+        <hgroup>
+          <h1 class="l-header-logo h4">
+            <a href="/index.html">Oliver Joseph Ash</a>
+          </h1>
+        </hgroup>
+        {% include nav-list.html %}
+      </header>
+      {{ content }}
+      <footer class="l-footer island">
+        {% if paginator.previous_page or paginator.next_page %}
+          <nav>
+            <h1>Pagination</h1>
+            <ul class="nav-list">
+              {% if paginator.previous_page %}
+                {% unless paginator.next_page %}
+                  {% assign paginationLast = "last" %}
+                {% endunless %}
+                <li class="{{ paginationLast }}">
+                  {% if paginator.previous_page == 1 %}
+                    <a href="/blog/">Newer entries</a>
+                  {% else %}
+                    <a href="/blog/page{{ paginator.previous_page }}/">Newer entries</a>
+                  {% endif %}
+                </li>
+              {% endif %}
+              </li>
+              {% if paginator.next_page %}
+                <li class="last">
+                  <a href="/blog/page{{ paginator.next_page }}/">Older entries</a>
+                </li>
+              {% endif %}
+            </ul>
+          </nav>
+        {% endif %}
+        {% assign showFirst = true %}
+        {% include nav-list.html %}
+      </footer>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+  </body>
+</html>

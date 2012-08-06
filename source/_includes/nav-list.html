@@ -1,0 +1,18 @@
+<nav>
+  <h1>Navigation</h1>
+  <ul class="nav-list">
+    {% for link in site.navigation %}
+      {% comment %}Variables are carried over through each iteration of the for
+      loop, so we need to reset it.{% endcomment %}
+      {% assign current = nil %}
+      {% if page.url == link.url | prepend: '/' %}
+        {% assign current = 'nav-list-item-current' %}
+      {% endif %}
+      {% if showFirst == true or forloop.first == false %}
+        <li{% if current or forloop.last %} class="{% if current %}{{ current }}{% endif %}{% if forloop.last %} last{% endif %}"{% endif %}>
+          <a href="{{ link.url }}">{{ link.text }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

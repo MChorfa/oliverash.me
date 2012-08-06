@@ -1,0 +1,51 @@
+{% if post %}
+  {% assign content = post.content %}
+{% endif %}
+{% if page %}
+  {% assign post = page %}
+{% endif %}
+
+{% capture url %}
+  {% if post.rewriteUrl %}{{ post.rewriteUrl }}{% else %}{{ post.url }}{% endif %}
+{% endcapture %}
+
+{% unless page.title %}
+  {% assign home = true %}
+{% endunless %}
+
+<article class="post{% if forloop.last %} last{% endif %}">
+
+  {% if post.layout == 'photo' or page.title == post.title %}
+    {% if post.layout == 'photo' %}
+      <a href="{{ url }}">
+    {% endif %}
+    {{ post.image }}
+    {% if post.layout == 'photo' %}
+      </a>
+    {% endif %}
+  {% endif %}
+
+  <div class="post-content island">
+
+    <header>
+      {% if post.layout == 'post' or page.title == post.title %}
+        <h1>{{ post.title }}</h1>
+      {% endif %}
+
+      <p class="post-time"><a href="{{ url }}"><time>{{ post.date | date: "%B %e, %Y" }}</time></a></p>
+    </header>
+
+    {% if page.title == post.title or home %}
+      {{ content }}
+    {% else %}
+      {% if post.excerpt %}
+        {{ post.excerpt | markdownify }}
+        <p class="post-excerpt-permalink"><a href="{{ post.url }}">Continue reading</a></p>
+      {% else %}
+        {{ post.content }}
+      {% endif %}
+    {% endif %}
+
+  </div>
+
+</article>

@@ -1,0 +1,18 @@
+destination: ../site
+auto: true
+server: true
+markdown: rdiscount
+future: false
+paginate: 5
+paginate_base: blog
+paginate_index: blog/index.html
+
+navigation:
+- text: Home
+  url: /index.html
+- text: About
+  url: /about/index.html
+- text: Blog
+  url: /blog/index.html
+- text: Archive
+  url: /archive/archive.html

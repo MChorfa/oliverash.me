@@ -1,0 +1,32 @@
+.post {
+  background-color: white;
+  overflow: hidden;
+  border-bottom: 1px solid hsl(0, 0%, 85%);
+
+  &.last {
+    border-bottom: 0;
+  }
+
+  .post-image {
+    display: block;
+    width: 100%;
+  }
+
+  .post-time,
+  .post-excerpt-permalink {
+    @extend .centered-text;
+  }
+}
+
+.post-content {
+  @extend %centered;
+  text-align: justify;
+
+  h1 {
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

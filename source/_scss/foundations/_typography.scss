@@ -1,0 +1,49 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: utopia-std, "Utopia Std", Georgia, serif;
+  color: black;
+
+  a {
+    color: steelBlue;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Double stranded heading hierachy
+// http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
+
+h1,
+h2 {
+  font-weight: 400;
+}
+
+h3,
+h4 {
+  font-family: proxima-nova-sc-osf, "Proxima Nova SC OSF", "Proxima Nova", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+h4 {
+  text-transform: lowercase;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+pre {
+  overflow: auto;
+}

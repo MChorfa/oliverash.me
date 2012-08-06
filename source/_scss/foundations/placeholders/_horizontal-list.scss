@@ -1,0 +1,8 @@
+%horizontal-list {
+  @include pie-clearfix();
+  @extend %styled-list;
+
+  li {
+    display: inline;
+  }
+}

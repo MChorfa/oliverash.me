@@ -1,0 +1,20 @@
+---
+layout: default
+title: Archive
+---
+
+<!-- <h1>{{ page.title }}</h1> -->
+<section class="post">
+  <div class="post-content">
+    <h1>{{ page.title }}</h1>
+    <ul class="l-archived-posts">
+      {% for post in site.posts %}
+        {% if post.layout == 'post' %}
+          <li style="overflow: hidden;">
+            <h2><a href="{{ post.url }}">{{ post.title | strip_html }}</a></h2>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,99 @@
+@mixin type-set($set: $type-set) {
+  @each $step in $set {
+    $font-size: 0;
+    $line-height: 0;
+    $content-width: 0;
+    $breakpoint: 0;
+    $index: index($set, $step) - 1;
+    $unit: 0;
+    $padding: 0;
+    $container-width: 0;
+
+    @if (length($step) >= 1) {
+      $font-size: nth($step, 1);
+    }
+
+    $unit: golden-unit($font-size);
+    $content-padding: $font-size * 2;
+
+    @if (length($step) >= 2) {
+      $breakpoint: nth($step, 2);
+      $container-width: $breakpoint - (($breakpoint * 0.025) * 2);
+      $container-padding: ($breakpoint * 0.05) * 2;
+      $content-width: $container-width - $content-padding - $container-padding;
+
+      $line-height: golden-height-adjusted($content-width, $font-size);
+    } @else if ($breakpoint == 0) {
+      $line-height: golden-height($font-size);
+      $content-width: golden-width-adjusted($font-size, $line-height);
+
+      // The illusion of padding either side of the content is achieved by
+      // adding to the width of the content
+      $breakpoint: $content-width + $content-padding;
+      $container-padding: ($breakpoint * 0.1) * 2;
+      $breakpoint: $breakpoint + $container-padding;
+      $container-width: $breakpoint - (($breakpoint * 0.025) * 2);
+    }
+
+    @include breakpoint($breakpoint) {
+      @include type-system($font-size, $line-height, $content-width, $container-width, $breakpoint, $index);
+    }
+  }
+}
+
+// Would be nice to use @content, but Sass' content block lives in the caller
+// scope
+@mixin type-system($font-size, $line-height, $content-width, $container-width, $breakpoint, $index) {
+  body {
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+
+  h4,
+  %text {
+    margin: {
+      top: $line-height;
+      bottom: $line-height;
+    };
+  }
+
+  .b#{$index}-break {
+    display: block;
+  }
+
+  .l-container {
+    max-width: $container-width;
+  }
+
+  .island {
+    padding: {
+      right: $font-size;
+      left: $font-size;
+    };
+  }
+
+  .post-content {
+    width: $content-width;
+    margin: {
+      top: $line-height * 3;
+      bottom: $line-height * 3;
+    };
+    // Overwrite mobile-first justified text
+    @if ($breakpoint == 480px) {
+      text-align: left;
+    }
+
+    // Modular scale typography
+    // https://github.com/scottkellum/modular-scale/
+    // Okay. I go a bit crazy and also calculate the optimal line height for
+    // headings, because they have different font sizes but share the same
+    // content width. Thus, the optimal line height will be different.
+    h1 {
+      @include golden-text-adjusted(modular-scale(2), $content-width);
+    }
+
+    h2 {
+      @include golden-text-adjusted(modular-scale(1), $content-width);
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@mixin grid($breakpoint: null, $gutter-width: $base-gutter-width) {
+  @if $breakpoint {
+    $breakpoint: "b#{$breakpoint}-";
+  }
+
+  .#{$breakpoint}gl,
+  .#{$breakpoint}gu-last {
+    @include clearfix();
+  }
+
+  .#{$breakpoint}gl {
+    margin-left: ($gutter-width * -1);
+  }
+
+  .#{$breakpoint}gu {
+    @include box-sizing(border-box);
+    float: left;
+    padding-left: $gutter-width;
+
+    .lt-ie8 & {
+      // Polyfill for box-sizing in IE
+      behavior: url(../js/box-sizing.htc);
+    }
+  }
+
+  .#{$breakpoint}unit-right {
+    float: right;
+  }
+
+  .#{$breakpoint}gc-1-of-1 {
+   float: none;
+  }
+
+  .#{$breakpoint}gc-1-of-2 {
+    width: 50%;
+  }
+
+  .#{$breakpoint}gc-1-of-3 {
+    width: 33.33333%;
+  }
+
+  .#{$breakpoint}gc-2-of-3 {
+    width: 66.66666%;
+  }
+
+  .#{$breakpoint}gc-1-of-4 {
+    width: 25%;
+  }
+
+  .#{$breakpoint}gc-3-of-4 {
+    width: 75%;
+  }
+
+  .#{$breakpoint}gc-1-of-5 {
+    width: 20%;
+  }
+
+  .#{$breakpoint}gc-1-of-6 {
+    width: 16.6666667%;
+  }
+
+  .#{$breakpoint}gc-2-of-5 {
+    width: 40%;
+  }
+
+  .#{$breakpoint}gc-3-of-5 {
+    width: 60%;
+  }
+
+  .#{$breakpoint}gc-4-of-5 {
+    width: 80%;
+  }
+
+  .#{$breakpoint}gu-last {
+    float: none;
+    width: auto;
+
+    .lt-ie7 & {
+      position: relative;
+      left: -3px;
+      margin-right: -3px;
+    }
+  }
+}

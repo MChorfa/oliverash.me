@@ -13,7 +13,7 @@
     <atom:link href="http://oliverash.me/feed/" rel="self" type="application/rss+xml" />
     <link>http://oliverash.me/</link>
     <description>Personal writing, work and photography</description>
-    <lastBuildDate>2012-08-07T19:40:39+01:00</lastBuildDate>
+    <lastBuildDate>2012-08-07T19:43:42+01:00</lastBuildDate>
     <language>en</language>
     <copyright>Copyright Jack Brewer</copyright>
 
@@ -24,7 +24,6 @@
       <pubDate>2012-08-06T00:00:00+01:00</pubDate>
       <guid>/2012/08/06/arbitrary-breakpoints-vs-robots</guid>
       <description>
-      
       &lt;p&gt;No matter how hard I try, I will never consider myself to be a good designer. Rather, I consider myself to have a working knowledge of best UX practices, and as much as I love and appreciate the principles of UX design &amp;mdash; especially responsive concerns such as content choreography &amp;mdash; I'm just no good when it comes to piecing together a design. All that said, I wanted my blog to be a place where I would feel comfortable with my writing. The fundamental criterion of this design was to hold together various types of content in one place: personal writing, my work and my photography.&lt;/p&gt;
 
 &lt;p&gt;The reading experience of people who come here is incredibly important to me, as a typography lover myself. I don't trust myself to make those designs, and fortunately I was able to rest on the shoulders of giants &amp;mdash; or should I say, maths &amp;mdash; to achieve a reading experience I would consider optimal. Call me crazy.&lt;/p&gt;
@@ -138,7 +137,6 @@ $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
       <guid>/2012/07/29/IMG_4333</guid>
       <description>
       
-      
 
       </description>
     </item>
@@ -149,7 +147,6 @@ $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
       <pubDate>2012-07-15T00:00:00+01:00</pubDate>
       <guid>/2012/07/15/lets-grab-life-by-the-throat-and-then-live-it-to-pieces</guid>
       <description>
-      
       &lt;p&gt;I have always been incredibly fascinated by nature, science, language, math&amp;hellip; the list goes on. But, you only get one life, which is something I find a great shame.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m happy with the path I chose, but every so often I am reminded of how disconnected we all are from the other things this life has got offer. After all, though, we are only human. But we live in communities, each of us trying to support ourselves and our families. By this nature, we are self-centred creatures.&lt;/p&gt;
@@ -169,7 +166,6 @@ $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
       <pubDate>2012-06-24T00:00:00+01:00</pubDate>
       <guid>/2012/06/24/IMG_4411</guid>
       <description>
-      
       
 
       </description>

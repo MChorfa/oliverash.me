@@ -28,9 +28,6 @@ layout: nil
       <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
       <guid>{{ post.id }}</guid>
       <description>
-      {% if post.demo %}
-        {{ "<p><strong>RSS Readers: This article contains a live demo which probably isn't going to work in your RSS reader. View the full post to see it in action.</strong></p>" | xml_escape }}
-      {% endif %}
       {{ post.content | xml_escape }}
       </description>
     </item>

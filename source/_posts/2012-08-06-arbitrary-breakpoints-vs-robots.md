@@ -103,4 +103,4 @@ When called, this mixin receives the results of our previous calculations in the
 
     @include type-set();
 
-Call the `type-set` mixin, and there we have it. No longer do I have to define arbitrary breakpoints based on my own assumptions. Using this method, my breakpoints are calculated using a theory, which is always going to beat my own personal judgement.
+Finally, I call the `type-set` mixin. And there we have it. No longer do I have to define arbitrary breakpoints based on my own assumptions. Using this method, my breakpoints are calculated using a theory, which is always going to beat my own personal judgement. The example provided here is a dumbed down version of the method used on my site, so I recommend you checkout [the code for this website over on GitHub](https://github.com/OliverJAsh/oliverash.me).

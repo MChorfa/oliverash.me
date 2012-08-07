@@ -1,3 +1,5 @@
+// Author note: modified by Oliver Joseph Ash
+
 /*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
 
 /* =============================================================================
@@ -188,6 +190,7 @@ samp {
 pre {
   white-space: pre;
   word-wrap: normal;
+  overflow: auto;
 }
 
 /*

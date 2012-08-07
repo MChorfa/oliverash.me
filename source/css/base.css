@@ -31,7 +31,7 @@ hr {
 /*
  * Corrects block display not defined in IE6/7/8/9 & FF3
  */
-/* line 21, ../_scss/foundations/_normalise.scss */
+/* line 23, ../_scss/foundations/_normalise.scss */
 article,
 aside,
 details,
@@ -48,7 +48,7 @@ summary {
 /*
  * Corrects inline-block display not defined in IE6/7/8/9 & FF3
  */
-/* line 31, ../_scss/foundations/_normalise.scss */
+/* line 33, ../_scss/foundations/_normalise.scss */
 audio,
 canvas,
 video {
@@ -60,7 +60,7 @@ video {
  * Prevents modern browsers from displaying 'audio' without controls
  * Remove excess height in iOS5 devices
  */
-/* line 42, ../_scss/foundations/_normalise.scss */
+/* line 44, ../_scss/foundations/_normalise.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -69,7 +69,7 @@ audio:not([controls]) {
  * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
  * Known issue: no IE6 support
  */
-/* line 52, ../_scss/foundations/_normalise.scss */
+/* line 54, ../_scss/foundations/_normalise.scss */
 [hidden] {
   display: none; }
 
@@ -82,7 +82,7 @@ audio:not([controls]) {
  * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
  *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
-/* line 68, ../_scss/foundations/_normalise.scss */
+/* line 70, ../_scss/foundations/_normalise.scss */
 html {
   font-size: 100%;
   /* 1 */
@@ -94,7 +94,7 @@ html {
 /*
  * Addresses font-family inconsistency between 'textarea' and other form elements.
  */
-/* line 82, ../_scss/foundations/_normalise.scss */
+/* line 84, ../_scss/foundations/_normalise.scss */
 html,
 button,
 input,
@@ -105,7 +105,7 @@ textarea {
 /*
  * Addresses margins handled incorrectly in IE6/7
  */
-/* line 90, ../_scss/foundations/_normalise.scss */
+/* line 92, ../_scss/foundations/_normalise.scss */
 body {
   margin: 0; }
 
@@ -115,7 +115,7 @@ body {
 /*
  * Addresses outline displayed oddly in Chrome
  */
-/* line 103, ../_scss/foundations/_normalise.scss */
+/* line 105, ../_scss/foundations/_normalise.scss */
 a:focus {
   outline: thin dotted; }
 
@@ -123,7 +123,7 @@ a:focus {
  * Improves readability when focused and also mouse hovered in all browsers
  * people.opera.com/patrickl/experiments/keyboard/test
  */
-/* line 113, ../_scss/foundations/_normalise.scss */
+/* line 115, ../_scss/foundations/_normalise.scss */
 a:hover,
 a:active {
   outline: 0; }
@@ -131,7 +131,7 @@ a:active {
 /* =============================================================================
    Typography
    ========================================================================== */
-/* line 127, ../_scss/foundations/_normalise.scss */
+/* line 129, ../_scss/foundations/_normalise.scss */
 h1, .h1,
 h2,
 .h2,
@@ -148,33 +148,33 @@ h6,
 /*
  * Addresses styling not present in IE7/8/9, S5, Chrome
  */
-/* line 136, ../_scss/foundations/_normalise.scss */
+/* line 138, ../_scss/foundations/_normalise.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /*
  * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
 */
-/* line 145, ../_scss/foundations/_normalise.scss */
+/* line 147, ../_scss/foundations/_normalise.scss */
 b,
 strong {
   font-weight: bold; }
 
-/* line 149, ../_scss/foundations/_normalise.scss */
+/* line 151, ../_scss/foundations/_normalise.scss */
 blockquote {
   margin-left: 40px; }
 
 /*
  * Addresses styling not present in S5, Chrome
  */
-/* line 157, ../_scss/foundations/_normalise.scss */
+/* line 159, ../_scss/foundations/_normalise.scss */
 dfn {
   font-style: italic; }
 
 /*
  * Addresses styling not present in IE6/7/8/9
  */
-/* line 165, ../_scss/foundations/_normalise.scss */
+/* line 167, ../_scss/foundations/_normalise.scss */
 mark {
   background: #ff0;
   color: #000; }
@@ -183,7 +183,7 @@ mark {
  * Corrects font family set oddly in IE6, S4/5, Chrome
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
  */
-/* line 178, ../_scss/foundations/_normalise.scss */
+/* line 180, ../_scss/foundations/_normalise.scss */
 pre,
 code,
 kbd,
@@ -195,28 +195,29 @@ samp {
 /*
  * Improves readability of pre-formatted text in all browsers
  */
-/* line 188, ../_scss/foundations/_normalise.scss */
+/* line 190, ../_scss/foundations/_normalise.scss */
 pre {
   white-space: pre;
-  word-wrap: normal; }
+  word-wrap: normal;
+  overflow: auto; }
 
 /*
  * 1. Addresses CSS quotes not supported in IE6/7
  * 2. Addresses quote property not supported in S4
  */
 /* 1 */
-/* line 200, ../_scss/foundations/_normalise.scss */
+/* line 203, ../_scss/foundations/_normalise.scss */
 q {
   quotes: none; }
 
 /* 2 */
-/* line 207, ../_scss/foundations/_normalise.scss */
+/* line 210, ../_scss/foundations/_normalise.scss */
 q:before,
 q:after {
   content: '';
   content: none; }
 
-/* line 212, ../_scss/foundations/_normalise.scss */
+/* line 215, ../_scss/foundations/_normalise.scss */
 small {
   font-size: 75%; }
 
@@ -224,7 +225,7 @@ small {
  * Prevents sub and sup affecting line-height in all browsers
  * gist.github.com/413930
  */
-/* line 222, ../_scss/foundations/_normalise.scss */
+/* line 225, ../_scss/foundations/_normalise.scss */
 sub,
 sup {
   font-size: 75%;
@@ -232,11 +233,11 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 229, ../_scss/foundations/_normalise.scss */
+/* line 232, ../_scss/foundations/_normalise.scss */
 sup {
   top: -0.5em; }
 
-/* line 233, ../_scss/foundations/_normalise.scss */
+/* line 236, ../_scss/foundations/_normalise.scss */
 sub {
   bottom: -0.25em; }
 
@@ -246,14 +247,14 @@ sub {
 /*
  * Addresses margins set differently in IE6/7
  */
-/* line 246, ../_scss/foundations/_normalise.scss */
+/* line 249, ../_scss/foundations/_normalise.scss */
 dd {
   margin: 0 0 0 40px; }
 
 /*
  * Addresses paddings set differently in IE6/7
  */
-/* line 256, ../_scss/foundations/_normalise.scss */
+/* line 259, ../_scss/foundations/_normalise.scss */
 menu,
 ol,
 ul {
@@ -262,7 +263,7 @@ ul {
 /*
  * Corrects list images handled incorrectly in IE7
  */
-/* line 265, ../_scss/foundations/_normalise.scss */
+/* line 268, ../_scss/foundations/_normalise.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -276,7 +277,7 @@ nav ol {
  * 2. Improves image quality when scaled in IE7
  *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
  */
-/* line 281, ../_scss/foundations/_normalise.scss */
+/* line 284, ../_scss/foundations/_normalise.scss */
 img {
   border: 0;
   /* 1 */
@@ -286,7 +287,7 @@ img {
 /*
  * Corrects overflow displayed oddly in IE9
  */
-/* line 290, ../_scss/foundations/_normalise.scss */
+/* line 293, ../_scss/foundations/_normalise.scss */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -296,7 +297,7 @@ svg:not(:root) {
 /*
  * Addresses margin not present in IE6/7/8/9, S5, O11
  */
-/* line 303, ../_scss/foundations/_normalise.scss */
+/* line 306, ../_scss/foundations/_normalise.scss */
 figure {
   margin: 0; }
 
@@ -306,14 +307,14 @@ figure {
 /*
  * Corrects margin displayed oddly in IE6/7
  */
-/* line 316, ../_scss/foundations/_normalise.scss */
+/* line 319, ../_scss/foundations/_normalise.scss */
 form {
   margin: 0; }
 
 /*
  * Define consistent border, margin, and padding
  */
-/* line 324, ../_scss/foundations/_normalise.scss */
+/* line 327, ../_scss/foundations/_normalise.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -324,7 +325,7 @@ fieldset {
  * 2. Corrects text not wrapping in FF3
  * 3. Corrects alignment displayed oddly in IE6/7
  */
-/* line 336, ../_scss/foundations/_normalise.scss */
+/* line 339, ../_scss/foundations/_normalise.scss */
 legend {
   border: 0;
   /* 1 */
@@ -339,7 +340,7 @@ legend {
  * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
  * 3. Improves appearance and consistency in all browsers
  */
-/* line 352, ../_scss/foundations/_normalise.scss */
+/* line 355, ../_scss/foundations/_normalise.scss */
 button,
 input,
 select,
@@ -356,7 +357,7 @@ textarea {
 /*
  * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
  */
-/* line 364, ../_scss/foundations/_normalise.scss */
+/* line 367, ../_scss/foundations/_normalise.scss */
 button,
 input {
   line-height: normal;
@@ -368,7 +369,7 @@ input {
  * 3. Removes inner spacing in IE7 without affecting normal text inputs
  *    Known issue: inner spacing remains in IE6
  */
-/* line 378, ../_scss/foundations/_normalise.scss */
+/* line 381, ../_scss/foundations/_normalise.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -383,7 +384,7 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements
  */
-/* line 389, ../_scss/foundations/_normalise.scss */
+/* line 392, ../_scss/foundations/_normalise.scss */
 button[disabled],
 input[disabled] {
   cursor: default; }
@@ -394,7 +395,7 @@ input[disabled] {
  * 3. Removes excess padding in IE7
     Known issue: excess padding remains in IE6
  */
-/* line 401, ../_scss/foundations/_normalise.scss */
+/* line 404, ../_scss/foundations/_normalise.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -410,7 +411,7 @@ input[type="radio"] {
  * 1. Addresses appearance set to searchfield in S5, Chrome
  * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
  */
-/* line 413, ../_scss/foundations/_normalise.scss */
+/* line 416, ../_scss/foundations/_normalise.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -422,7 +423,7 @@ input[type="search"] {
 /*
  * Removes inner padding and search cancel button in S5, Chrome on OS X
  */
-/* line 425, ../_scss/foundations/_normalise.scss */
+/* line 428, ../_scss/foundations/_normalise.scss */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none; }
@@ -431,7 +432,7 @@ input[type="search"]::-webkit-search-cancel-button {
  * Removes inner padding and border in FF3+
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
  */
-/* line 435, ../_scss/foundations/_normalise.scss */
+/* line 438, ../_scss/foundations/_normalise.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -441,7 +442,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE6/7/8/9
  * 2. Improves readability and alignment in all browsers
  */
-/* line 445, ../_scss/foundations/_normalise.scss */
+/* line 448, ../_scss/foundations/_normalise.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -454,7 +455,7 @@ textarea {
 /*
  * Remove most spacing between table cells
  */
-/* line 459, ../_scss/foundations/_normalise.scss */
+/* line 462, ../_scss/foundations/_normalise.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -503,10 +504,6 @@ h4, .h4 {
 .post .post-excerpt-permalink {
   text-align: center; }
 
-/* line 47, ../_scss/foundations/_typography.scss */
-pre {
-  overflow: auto; }
-
 /* line 1, ../_scss/foundations/placeholders/_styled-list.scss */
 .nav-list, .l-archived-posts {
   list-style: none;
@@ -540,10 +537,6 @@ pre {
   .nav-list .last {
     margin-right: 0; }
 
-/* line 1, ../_scss/foundations/modules/_island.scss */
-.island {
-  overflow: hidden; }
-
 /* line 1, ../_scss/foundations/modules/_post.scss */
 .post {
   background-color: white;
@@ -567,12 +560,12 @@ pre {
   .post-content img {
     max-width: 100%; }
 
-/* line 47, ../_scss/library/_type-set.scss */
+/* line 12, ../_scss/foundations/_type-system.scss */
 body {
   font-size: 16px;
   line-height: 22.715px; }
 
-/* line 53, ../_scss/library/_type-set.scss */
+/* line 18, ../_scss/foundations/_type-system.scss */
 h4, .h4,
 blockquote,
 p,
@@ -585,37 +578,46 @@ hr {
   margin-top: 22.715px;
   margin-bottom: 22.715px; }
 
-/* line 60, ../_scss/library/_type-set.scss */
+/* line 25, ../_scss/foundations/_type-system.scss */
+pre {
+  padding: 16px;
+  font-size: 12.8px;
+  line-height: 18.673px;
+  margin-top: 18.673px;
+  margin-bottom: 18.673px;
+  width: 208px; }
+
+/* line 30, ../_scss/foundations/_type-system.scss */
 .b0-break {
   display: block; }
 
-/* line 64, ../_scss/library/_type-set.scss */
+/* line 34, ../_scss/foundations/_type-system.scss */
 .l-container {
   max-width: 304px; }
 
-/* line 68, ../_scss/library/_type-set.scss */
+/* line 38, ../_scss/foundations/_type-system.scss */
 .island {
   padding-right: 16px;
   padding-left: 16px; }
 
-/* line 75, ../_scss/library/_type-set.scss */
+/* line 45, ../_scss/foundations/_type-system.scss */
 .post-content {
   width: 240px;
   margin-top: 68.144px;
   margin-bottom: 68.144px; }
-  /* line 91, ../_scss/library/_type-set.scss */
+  /* line 61, ../_scss/foundations/_type-system.scss */
   .post-content h1, .post-content .h1 {
-    font-size: 42px;
-    line-height: 55.653px;
-    margin-top: 55.653px;
-    margin-bottom: 55.653px;
+    font-size: 28px;
+    line-height: 37.664px;
+    margin-top: 37.664px;
+    margin-bottom: 37.664px;
     width: 240px; }
-  /* line 95, ../_scss/library/_type-set.scss */
+  /* line 65, ../_scss/foundations/_type-system.scss */
   .post-content h2, .post-content .h2 {
-    font-size: 26px;
-    line-height: 35.124px;
-    margin-top: 35.124px;
-    margin-bottom: 35.124px;
+    font-size: 21px;
+    line-height: 28.838px;
+    margin-top: 28.838px;
+    margin-bottom: 28.838px;
     width: 240px; }
 
 /* line 20, ../_scss/base.scss */
@@ -641,3 +643,8 @@ nav > h1, nav > .h1 {
 /* line 52, ../_scss/base.scss */
 .l-footer, .l-footer a {
   color: gray; }
+
+/* line 61, ../_scss/base.scss */
+pre {
+  background: ghostWhite;
+  border: 1px solid #e6e6e6; }

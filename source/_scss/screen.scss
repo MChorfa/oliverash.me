@@ -1,6 +1,8 @@
 @import "settings";
 @import "library";
 
+@import "foundations/type-system";
+
 @include type-set();
 
 @import "aliases";

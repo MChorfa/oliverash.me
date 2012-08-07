@@ -8,11 +8,11 @@ $fix-breakpoint: 320px;
 @import "foundations/reset";
 @import "foundations/normalise";
 @import "foundations/typography";
+@import "foundations/type-system";
 @import "foundations/placeholders/styled-list";
 @import "foundations/placeholders/horizontal-list";
 @import "foundations/placeholders/centered";
 @import "foundations/modules/nav-list";
-@import "foundations/modules/island";
 @import "foundations/modules/post";
 
 @include type-set();
@@ -56,4 +56,9 @@ nav {
 
 .l-archived-posts {
   @extend %styled-list;
+}
+
+pre {
+  background: ghostWhite;
+  border: 1px solid hsl(0, 0%, 90%);
 }

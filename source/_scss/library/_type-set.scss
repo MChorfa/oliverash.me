@@ -1,99 +1,57 @@
 @mixin type-set($set: $type-set) {
+
   @each $step in $set {
-    $font-size: 0;
+    // Variables hoisted to the top
+    $font-size: nth($step, 1);
     $line-height: 0;
     $content-width: 0;
+    $unit: golden-unit($font-size);
+
     $breakpoint: 0;
     $index: index($set, $step) - 1;
-    $unit: 0;
-    $padding: 0;
     $container-width: 0;
-
-    @if (length($step) >= 1) {
-      $font-size: nth($step, 1);
-    }
-
-    $unit: golden-unit($font-size);
     $content-padding: $font-size * 2;
 
     @if (length($step) >= 2) {
+      // If a constraint has been applied, we calculate the content width (the
+      // breakpoint provided with whatever padding/margin substracted away) and
+      // then calculate font size based on the given content width and font
+      // size.
+
+      // Because we already have a breakpoint, we must reverse engineer this
+      // number to calculate the content width. Essentially this is just
+      // substracting the padding and margin of the content from the breakpoint
+      // to find the content width.
       $breakpoint: nth($step, 2);
       $container-width: $breakpoint - (($breakpoint * 0.025) * 2);
-      $container-padding: ($breakpoint * 0.05) * 2;
-      $content-width: $container-width - $content-padding - $container-padding;
+      // On mobile (devices with constraints), the margin of the content is
+      // less.
+      $content-margin: ($breakpoint * 0.05) * 2;
+      $content-width: $container-width - $content-padding - $content-margin;
 
       $line-height: golden-height-adjusted($content-width, $font-size);
+
     } @else if ($breakpoint == 0) {
+      // If a constraint hasn't been applied, we are free to generate a content
+      // width and line height based on the optimal settings
+
       $line-height: golden-height($font-size);
       $content-width: golden-width-adjusted($font-size, $line-height);
 
       // The illusion of padding either side of the content is achieved by
       // adding to the width of the content
       $breakpoint: $content-width + $content-padding;
-      $container-padding: ($breakpoint * 0.1) * 2;
-      $breakpoint: $breakpoint + $container-padding;
+      // The margin of the content is 10% of the breakpoint width
+      $content-margin: ($breakpoint * 0.1) * 2;
+      $breakpoint: $breakpoint + $content-margin;
       $container-width: $breakpoint - (($breakpoint * 0.025) * 2);
+
     }
 
+    // Finally, created a media query and generate the styles of the type system.
     @include breakpoint($breakpoint) {
       @include type-system($font-size, $line-height, $content-width, $container-width, $breakpoint, $index);
     }
   }
-}
 
-// Would be nice to use @content, but Sass' content block lives in the caller
-// scope
-@mixin type-system($font-size, $line-height, $content-width, $container-width, $breakpoint, $index) {
-  body {
-    font-size: $font-size;
-    line-height: $line-height;
-  }
-
-  h4,
-  %text {
-    margin: {
-      top: $line-height;
-      bottom: $line-height;
-    };
-  }
-
-  .b#{$index}-break {
-    display: block;
-  }
-
-  .l-container {
-    max-width: $container-width;
-  }
-
-  .island {
-    padding: {
-      right: $font-size;
-      left: $font-size;
-    };
-  }
-
-  .post-content {
-    width: $content-width;
-    margin: {
-      top: $line-height * 3;
-      bottom: $line-height * 3;
-    };
-    // Overwrite mobile-first justified text
-    @if ($breakpoint == 480px) {
-      text-align: left;
-    }
-
-    // Modular scale typography
-    // https://github.com/scottkellum/modular-scale/
-    // Okay. I go a bit crazy and also calculate the optimal line height for
-    // headings, because they have different font sizes but share the same
-    // content width. Thus, the optimal line height will be different.
-    h1 {
-      @include golden-text-adjusted(modular-scale(2), $content-width);
-    }
-
-    h2 {
-      @include golden-text-adjusted(modular-scale(1), $content-width);
-    }
-  }
 }

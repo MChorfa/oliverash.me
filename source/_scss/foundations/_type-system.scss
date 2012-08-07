@@ -1,0 +1,69 @@
+// Would be nice to use @content, but Sass' content block lives in the caller
+// scope
+@mixin type-system($font-size, $line-height, $content-width, $container-width, $breakpoint, $index) {
+  // Golden ratio, used for the modular scale
+  $ratio: 1.61803 / 1;
+  // Change the modular scale for smaller devices
+  @if ($breakpoint <= 480px) {
+    // Perfect fifth
+    $ratio: 4 / 3;
+  }
+
+  body {
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+
+  h4,
+  %text {
+    margin: {
+      top: $line-height;
+      bottom: $line-height;
+    };
+  }
+
+  pre {
+    padding: $font-size;
+    @include golden-text-adjusted($font-size * 0.8, $content-width - ($font-size * 2));
+  }
+
+  .b#{$index}-break {
+    display: block;
+  }
+
+  .l-container {
+    max-width: $container-width;
+  }
+
+  .island {
+    padding: {
+      right: $font-size;
+      left: $font-size;
+    };
+  }
+
+  .post-content {
+    width: $content-width;
+    margin: {
+      top: $line-height * 3;
+      bottom: $line-height * 3;
+    };
+    // Overwrite mobile-first justified text
+    @if ($breakpoint == 480px) {
+      text-align: left;
+    }
+
+    // Modular scale typography
+    // https://github.com/scottkellum/modular-scale/
+    // Okay. I go a bit crazy and also calculate the optimal line height for
+    // headings, because they have different font sizes but share the same
+    // content width. Thus, the optimal line height will be different.
+    h1 {
+      @include golden-text-adjusted(modular-scale(2, $font-size, $ratio), $content-width);
+    }
+
+    h2 {
+      @include golden-text-adjusted(modular-scale(1, $font-size, $ratio), $content-width);
+    }
+  }
+}

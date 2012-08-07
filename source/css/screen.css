@@ -1,10 +1,10 @@
 @media (min-width: 320px) {
-  /* line 47, ../_scss/library/_type-set.scss */
+  /* line 12, ../_scss/foundations/_type-system.scss */
   body {
     font-size: 16px;
     line-height: 22.715px; }
 
-  /* line 53, ../_scss/library/_type-set.scss */
+  /* line 18, ../_scss/foundations/_type-system.scss */
   h4, .h4,
   blockquote,
   p,
@@ -17,45 +17,54 @@
     margin-top: 22.715px;
     margin-bottom: 22.715px; }
 
-  /* line 60, ../_scss/library/_type-set.scss */
+  /* line 25, ../_scss/foundations/_type-system.scss */
+  pre {
+    padding: 16px;
+    font-size: 12.8px;
+    line-height: 18.673px;
+    margin-top: 18.673px;
+    margin-bottom: 18.673px;
+    width: 208px; }
+
+  /* line 30, ../_scss/foundations/_type-system.scss */
   .b0-break {
     display: block; }
 
-  /* line 64, ../_scss/library/_type-set.scss */
+  /* line 34, ../_scss/foundations/_type-system.scss */
   .l-container {
     max-width: 304px; }
 
-  /* line 68, ../_scss/library/_type-set.scss */
+  /* line 38, ../_scss/foundations/_type-system.scss */
   .island {
     padding-right: 16px;
     padding-left: 16px; }
 
-  /* line 75, ../_scss/library/_type-set.scss */
+  /* line 45, ../_scss/foundations/_type-system.scss */
   .post-content {
     width: 240px;
     margin-top: 68.144px;
     margin-bottom: 68.144px; }
-    /* line 91, ../_scss/library/_type-set.scss */
+    /* line 61, ../_scss/foundations/_type-system.scss */
     .post-content h1, .post-content .h1 {
-      font-size: 42px;
-      line-height: 55.653px;
-      margin-top: 55.653px;
-      margin-bottom: 55.653px;
+      font-size: 28px;
+      line-height: 37.664px;
+      margin-top: 37.664px;
+      margin-bottom: 37.664px;
       width: 240px; }
-    /* line 95, ../_scss/library/_type-set.scss */
+    /* line 65, ../_scss/foundations/_type-system.scss */
     .post-content h2, .post-content .h2 {
-      font-size: 26px;
-      line-height: 35.124px;
-      margin-top: 35.124px;
-      margin-bottom: 35.124px;
+      font-size: 21px;
+      line-height: 28.838px;
+      margin-top: 28.838px;
+      margin-bottom: 28.838px;
       width: 240px; } }
 @media (min-width: 480px) {
-  /* line 47, ../_scss/library/_type-set.scss */
+  /* line 12, ../_scss/foundations/_type-system.scss */
   body {
     font-size: 16px;
     line-height: 23.718px; }
 
-  /* line 53, ../_scss/library/_type-set.scss */
+  /* line 18, ../_scss/foundations/_type-system.scss */
   h4, .h4,
   blockquote,
   p,
@@ -68,46 +77,55 @@
     margin-top: 23.718px;
     margin-bottom: 23.718px; }
 
-  /* line 60, ../_scss/library/_type-set.scss */
+  /* line 25, ../_scss/foundations/_type-system.scss */
+  pre {
+    padding: 16px;
+    font-size: 12.8px;
+    line-height: 19.928px;
+    margin-top: 19.928px;
+    margin-bottom: 19.928px;
+    width: 344px; }
+
+  /* line 30, ../_scss/foundations/_type-system.scss */
   .b1-break {
     display: block; }
 
-  /* line 64, ../_scss/library/_type-set.scss */
+  /* line 34, ../_scss/foundations/_type-system.scss */
   .l-container {
     max-width: 456px; }
 
-  /* line 68, ../_scss/library/_type-set.scss */
+  /* line 38, ../_scss/foundations/_type-system.scss */
   .island {
     padding-right: 16px;
     padding-left: 16px; }
 
-  /* line 75, ../_scss/library/_type-set.scss */
+  /* line 45, ../_scss/foundations/_type-system.scss */
   .post-content {
     width: 376px;
     margin-top: 71.154px;
     margin-bottom: 71.154px;
     text-align: left; }
-    /* line 91, ../_scss/library/_type-set.scss */
+    /* line 61, ../_scss/foundations/_type-system.scss */
     .post-content h1, .post-content .h1 {
-      font-size: 42px;
-      line-height: 56.035px;
-      margin-top: 56.035px;
-      margin-bottom: 56.035px;
+      font-size: 28px;
+      line-height: 38.238px;
+      margin-top: 38.238px;
+      margin-bottom: 38.238px;
       width: 376px; }
-    /* line 95, ../_scss/library/_type-set.scss */
+    /* line 65, ../_scss/foundations/_type-system.scss */
     .post-content h2, .post-content .h2 {
-      font-size: 26px;
-      line-height: 35.741px;
-      margin-top: 35.741px;
-      margin-bottom: 35.741px;
+      font-size: 21px;
+      line-height: 29.603px;
+      margin-top: 29.603px;
+      margin-bottom: 29.603px;
       width: 376px; } }
 @media (min-width: 860.4px) {
-  /* line 47, ../_scss/library/_type-set.scss */
+  /* line 12, ../_scss/foundations/_type-system.scss */
   body {
     font-size: 16px;
     line-height: 26px; }
 
-  /* line 53, ../_scss/library/_type-set.scss */
+  /* line 18, ../_scss/foundations/_type-system.scss */
   h4, .h4,
   blockquote,
   p,
@@ -120,32 +138,41 @@
     margin-top: 26px;
     margin-bottom: 26px; }
 
-  /* line 60, ../_scss/library/_type-set.scss */
+  /* line 25, ../_scss/foundations/_type-system.scss */
+  pre {
+    padding: 16px;
+    font-size: 12.8px;
+    line-height: 22.777px;
+    margin-top: 22.777px;
+    margin-bottom: 22.777px;
+    width: 653px; }
+
+  /* line 30, ../_scss/foundations/_type-system.scss */
   .b2-break {
     display: block; }
 
-  /* line 64, ../_scss/library/_type-set.scss */
+  /* line 34, ../_scss/foundations/_type-system.scss */
   .l-container {
     max-width: 817.38px; }
 
-  /* line 68, ../_scss/library/_type-set.scss */
+  /* line 38, ../_scss/foundations/_type-system.scss */
   .island {
     padding-right: 16px;
     padding-left: 16px; }
 
-  /* line 75, ../_scss/library/_type-set.scss */
+  /* line 45, ../_scss/foundations/_type-system.scss */
   .post-content {
     width: 685px;
     margin-top: 78px;
     margin-bottom: 78px; }
-    /* line 91, ../_scss/library/_type-set.scss */
+    /* line 61, ../_scss/foundations/_type-system.scss */
     .post-content h1, .post-content .h1 {
       font-size: 42px;
       line-height: 56.904px;
       margin-top: 56.904px;
       margin-bottom: 56.904px;
       width: 685px; }
-    /* line 95, ../_scss/library/_type-set.scss */
+    /* line 65, ../_scss/foundations/_type-system.scss */
     .post-content h2, .post-content .h2 {
       font-size: 26px;
       line-height: 37.144px;
@@ -153,12 +180,12 @@
       margin-bottom: 37.144px;
       width: 685px; } }
 @media (min-width: 1038px) {
-  /* line 47, ../_scss/library/_type-set.scss */
+  /* line 12, ../_scss/foundations/_type-system.scss */
   body {
     font-size: 18px;
     line-height: 29px; }
 
-  /* line 53, ../_scss/library/_type-set.scss */
+  /* line 18, ../_scss/foundations/_type-system.scss */
   h4, .h4,
   blockquote,
   p,
@@ -171,45 +198,54 @@
     margin-top: 29px;
     margin-bottom: 29px; }
 
-  /* line 60, ../_scss/library/_type-set.scss */
+  /* line 25, ../_scss/foundations/_type-system.scss */
+  pre {
+    padding: 18px;
+    font-size: 14.4px;
+    line-height: 25.35px;
+    margin-top: 25.35px;
+    margin-bottom: 25.35px;
+    width: 793px; }
+
+  /* line 30, ../_scss/foundations/_type-system.scss */
   .b3-break {
     display: block; }
 
-  /* line 64, ../_scss/library/_type-set.scss */
+  /* line 34, ../_scss/foundations/_type-system.scss */
   .l-container {
     max-width: 986.1px; }
 
-  /* line 68, ../_scss/library/_type-set.scss */
+  /* line 38, ../_scss/foundations/_type-system.scss */
   .island {
     padding-right: 18px;
     padding-left: 18px; }
 
-  /* line 75, ../_scss/library/_type-set.scss */
+  /* line 45, ../_scss/foundations/_type-system.scss */
   .post-content {
     width: 829px;
     margin-top: 87px;
     margin-bottom: 87px; }
-    /* line 91, ../_scss/library/_type-set.scss */
+    /* line 61, ../_scss/foundations/_type-system.scss */
     .post-content h1, .post-content .h1 {
-      font-size: 42px;
-      line-height: 57.308px;
-      margin-top: 57.308px;
-      margin-bottom: 57.308px;
+      font-size: 47px;
+      line-height: 63.606px;
+      margin-top: 63.606px;
+      margin-bottom: 63.606px;
       width: 829px; }
-    /* line 95, ../_scss/library/_type-set.scss */
+    /* line 65, ../_scss/foundations/_type-system.scss */
     .post-content h2, .post-content .h2 {
-      font-size: 26px;
-      line-height: 37.798px;
-      margin-top: 37.798px;
-      margin-bottom: 37.798px;
+      font-size: 29px;
+      line-height: 41.336px;
+      margin-top: 41.336px;
+      margin-bottom: 41.336px;
       width: 829px; } }
 @media (min-width: 1231.2px) {
-  /* line 47, ../_scss/library/_type-set.scss */
+  /* line 12, ../_scss/foundations/_type-system.scss */
   body {
     font-size: 20px;
     line-height: 32px; }
 
-  /* line 53, ../_scss/library/_type-set.scss */
+  /* line 18, ../_scss/foundations/_type-system.scss */
   h4, .h4,
   blockquote,
   p,
@@ -222,35 +258,44 @@
     margin-top: 32px;
     margin-bottom: 32px; }
 
-  /* line 60, ../_scss/library/_type-set.scss */
+  /* line 25, ../_scss/foundations/_type-system.scss */
+  pre {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 27.923px;
+    margin-top: 27.923px;
+    margin-bottom: 27.923px;
+    width: 946px; }
+
+  /* line 30, ../_scss/foundations/_type-system.scss */
   .b4-break {
     display: block; }
 
-  /* line 64, ../_scss/library/_type-set.scss */
+  /* line 34, ../_scss/foundations/_type-system.scss */
   .l-container {
     max-width: 1169.64px; }
 
-  /* line 68, ../_scss/library/_type-set.scss */
+  /* line 38, ../_scss/foundations/_type-system.scss */
   .island {
     padding-right: 20px;
     padding-left: 20px; }
 
-  /* line 75, ../_scss/library/_type-set.scss */
+  /* line 45, ../_scss/foundations/_type-system.scss */
   .post-content {
     width: 986px;
     margin-top: 96px;
     margin-bottom: 96px; }
-    /* line 91, ../_scss/library/_type-set.scss */
+    /* line 61, ../_scss/foundations/_type-system.scss */
     .post-content h1, .post-content .h1 {
-      font-size: 42px;
-      line-height: 57.75px;
-      margin-top: 57.75px;
-      margin-bottom: 57.75px;
+      font-size: 52px;
+      line-height: 70.307px;
+      margin-top: 70.307px;
+      margin-bottom: 70.307px;
       width: 986px; }
-    /* line 95, ../_scss/library/_type-set.scss */
+    /* line 65, ../_scss/foundations/_type-system.scss */
     .post-content h2, .post-content .h2 {
-      font-size: 26px;
-      line-height: 38.511px;
-      margin-top: 38.511px;
-      margin-bottom: 38.511px;
+      font-size: 32px;
+      line-height: 45.525px;
+      margin-top: 45.525px;
+      margin-bottom: 45.525px;
       width: 986px; } }

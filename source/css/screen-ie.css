@@ -1,14 +1,14 @@
 /*
 Syntax error: Undefined operation: "true gte 320px".
         on line 50 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/library/_breakpoint.scss, in `breakpoint'
-        from line 38 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/library/_type-set.scss, in `type-set'
-        from line 4 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/screen.scss
+        from line 52 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/library/_type-set.scss, in `type-set'
+        from line 6 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/screen.scss
         from line 3 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/screen-ie.scss
 
 Backtrace:
 /Users/Oliver/Development/Static/OliverJAsh/source/_scss/library/_breakpoint.scss:50:in `breakpoint'
-/Users/Oliver/Development/Static/OliverJAsh/source/_scss/library/_type-set.scss:38:in `type-set'
-/Users/Oliver/Development/Static/OliverJAsh/source/_scss/screen.scss:4
+/Users/Oliver/Development/Static/OliverJAsh/source/_scss/library/_type-set.scss:52:in `type-set'
+/Users/Oliver/Development/Static/OliverJAsh/source/_scss/screen.scss:6
 /Users/Oliver/Development/Static/OliverJAsh/source/_scss/screen-ie.scss:3
 /Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.261/lib/sass/../sass/script/operation.rb:93:in `_perform'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.261/lib/sass/../sass/script/node.rb:40:in `perform'
@@ -87,7 +87,7 @@ Backtrace:
 /Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:126:in `timed'
 /Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:100:in `run'
 /Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/lib/compass/commands/watch_project.rb:147:in `recompile'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `to_proc'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:55:in `to_proc'
 /Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `call'
 /Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
 /Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'
@@ -117,4 +117,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined operation: \"true gte 320px\".\A         on line 50 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/library/_breakpoint.scss, in `breakpoint'\A         from line 38 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/library/_type-set.scss, in `type-set'\A         from line 4 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/screen.scss\A         from line 3 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/screen-ie.scss"; }
+  content: "Syntax error: Undefined operation: \"true gte 320px\".\A         on line 50 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/library/_breakpoint.scss, in `breakpoint'\A         from line 52 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/library/_type-set.scss, in `type-set'\A         from line 6 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/screen.scss\A         from line 3 of /Users/Oliver/Development/Static/OliverJAsh/source/_scss/screen-ie.scss"; }

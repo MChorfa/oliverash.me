@@ -1,7 +1,7 @@
 ---
 tags: ['Promoted']
 layout: post
-title: So Long, Arbitrary Breakpoints
+title: Arbitrary Breakpoints vs. Robots
 ---
 
 {% excerpt %}

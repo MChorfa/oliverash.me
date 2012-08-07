@@ -12,7 +12,7 @@
       <link rel="stylesheet" href="css/screen-ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}Oliver Joseph Ash</title>
+    <title>{% if page.title %}{{ page.title | strip_html }} - {% endif %}Oliver Joseph Ash</title>
     <script src="/js/modernizr-2.6.1.min.js"></script>
     <script type="text/javascript" src="//use.typekit.net/qtb5goz.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>

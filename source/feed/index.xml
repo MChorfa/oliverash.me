@@ -1,0 +1,40 @@
+---
+layout: nil
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+  >
+
+  <channel>
+    <title>Oliver Joseph Ash</title>
+    <atom:link href="http://oliverash.me/feed/" rel="self" type="application/rss+xml" />
+    <link>http://oliverash.me/</link>
+    <description>Personal writing, work and photography</description>
+    <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+    <language>en</language>
+    <copyright>Copyright Jack Brewer</copyright>
+
+    {% for post in site.posts limit:10 %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>http://oliverash.me/{{ post.url }}</link>
+      <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+      <guid>{{ post.id }}</guid>
+      <description>
+      {% if post.demo %}
+        {{ "<p><strong>RSS Readers: This article contains a live demo which probably isn't going to work in your RSS reader. View the full post to see it in action.</strong></p>" | xml_escape }}
+      {% endif %}
+      {{ post.content | xml_escape }}
+      </description>
+    </item>
+    {% endfor %}
+  </channel>
+
+</rss>

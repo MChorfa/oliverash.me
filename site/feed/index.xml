@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+  >
+
+  <channel>
+    <title>Oliver Joseph Ash</title>
+    <atom:link href="http://oliverash.me/feed/" rel="self" type="application/rss+xml" />
+    <link>http://oliverash.me/</link>
+    <description>Personal writing, work and photography</description>
+    <lastBuildDate>2012-08-07T19:40:39+01:00</lastBuildDate>
+    <language>en</language>
+    <copyright>Copyright Jack Brewer</copyright>
+
+    
+    <item>
+      <title>Arbitrary Breakpoints vs. Robots</title>
+      <link>http://oliverash.me//2012/08/06/arbitrary-breakpoints-vs-robots.html</link>
+      <pubDate>2012-08-06T00:00:00+01:00</pubDate>
+      <guid>/2012/08/06/arbitrary-breakpoints-vs-robots</guid>
+      <description>
+      
+      &lt;p&gt;No matter how hard I try, I will never consider myself to be a good designer. Rather, I consider myself to have a working knowledge of best UX practices, and as much as I love and appreciate the principles of UX design &amp;mdash; especially responsive concerns such as content choreography &amp;mdash; I'm just no good when it comes to piecing together a design. All that said, I wanted my blog to be a place where I would feel comfortable with my writing. The fundamental criterion of this design was to hold together various types of content in one place: personal writing, my work and my photography.&lt;/p&gt;
+
+&lt;p&gt;The reading experience of people who come here is incredibly important to me, as a typography lover myself. I don't trust myself to make those designs, and fortunately I was able to rest on the shoulders of giants &amp;mdash; or should I say, maths &amp;mdash; to achieve a reading experience I would consider optimal. Call me crazy.&lt;/p&gt;
+
+&lt;h2&gt;Golden Ratio Typography&lt;/h2&gt;
+
+&lt;p&gt;Ever since I read about a theory that uses &lt;a href=&quot;http://www.pearsonified.com/2011/12/golden-ratio-typography.php&quot;&gt;the golden ratio to calculate optimal typography&lt;/a&gt;, my appreciation of print design has been taken to a whole new level. In all of my previous projects I had either defined a relative line height (read: 1.5) for my typography or applied my &lt;a href=&quot;http://www.alistapart.com/articles/settingtypeontheweb/&quot;&gt;typography to a baseline to maintain a vertical rhythm&lt;/a&gt;. Seeing all of my columns line up perfectly was damn pleasing for the nerd inside of me. However, two columns of text, each with different font sizes but equal in line-height; this probably isn't going to provide the user with an optimal reading experience.&lt;/p&gt;
+
+&lt;p&gt;In print media, the line height is determined by the content width. Take a narrow column of text; the eye doesn't have to travel so far at the end of a line to get to the start of the new line. It is for this reason I believe the line height of text should be determined by the width of the column. You would think that setting relative line heights and then increasing the font size for wider screens would be enough, but if the content width of your column stays the same, then your line height is most likely going to need to be changed as well - if you care about your users reading experience. Relative line heights are easy, and truthfully doing it this way is a pain (especially on responsive builds), but it's definitely something worth considering.&lt;/p&gt;
+
+&lt;p&gt;With all relative font sizes now gone, I chose to let the type design itself. The Golden Ratio Typography theory calculates optimal settings however you want it to. If you have a design constraint of say, a device that is 320px wide, but you want your font size to be no less than 16px, then you can calculate the optimal line height based on this content width and font size. After I designed for mobile, almost all of those constraints had disappeared. I defined an array of font sizes, and out come the optimal content width and line height. This was essentially all I needed for my design.&lt;/p&gt;
+
+&lt;h2&gt;Doing the Math&lt;/h2&gt;
+
+&lt;p&gt;Fortunately, there is a &lt;a href=&quot;http://www.pearsonified.com/typography/&quot;&gt;calculator online&lt;/a&gt; for you to run through some tests and have a go for yourself. However, being a devotee of CSS preprocessors, I chose to leave these calculations until run time for maintainability reasons.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// settings
+
+$type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This two dimension list provides me with two options: font size and breakpoint. My first breakpoint is 320px, for which I chose to serve a font size of 16px. This is followed by a breakpoint of 480px with a font size of 16px once again. Finally, I have three font sizes: 16px, 18px and 20px, all of which have no width restrictions.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// library/type-set
+
+@mixin type-set($set: $type-set) {
+
+  @each $step in $set {
+    // Variables hoisted to the top
+    $font-size: nth($step, 1);
+    $line-height: 0;
+    $content-width: 0;
+    $unit: golden-unit($font-size);
+
+    $breakpoint: 0;
+    $index: index($set, $step) - 1;
+
+    @if (length($step) &amp;gt;= 2) {
+      // If a constraint has been applied, we just need to calculate the
+      // optimal line height.
+      $content-width: nth($step, 2);
+
+      $line-height: golden-height-adjusted($content-width, $font-size);
+
+    } @else if ($breakpoint == 0) {
+      // If a constraint hasn't been applied, we are free to generate a content
+      // width and line height based on the optimal settings
+
+      $line-height: golden-height($font-size);
+      $content-width: golden-width-adjusted($font-size, $line-height);
+
+    }
+
+    // Finally, created a media query and generate the styles of the type system.
+    @include breakpoint($content-width) {
+      @include type-system($font-size, $line-height, $content-width, $index);
+    }
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When called, this mixin will loop through my &lt;code&gt;$type-set&lt;/code&gt; list and run the golden ratio calculations through the &lt;a href=&quot;https://github.com/maxbeatty/goldentype&quot;&gt;Golden Ratio Typography plugin for Compass&lt;/a&gt;. For list items with a breakpoint, the optimal line height is calculated, whereas for those without breakpoints, optimal line height and content width is calculated. On each iteration, a media query is defined - the breakpoint for which is calculated based on the optimal content width. Inside of this media query I make a call to another mixin called &lt;code&gt;type-system&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// foundations/type-system
+
+@mixin type-system($font-size, $line-height, $content-width, $index) {
+  body {
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+
+  p,
+  ul,
+  ol {
+    margin: {
+      top: $line-height;
+      bottom: $line-height;
+    };
+  }
+
+  .container,
+  .post-content {
+    max-width: $content-width;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When called, this mixin receives the results of our previous calculations in the form of &lt;code&gt;$font-size&lt;/code&gt;, &lt;code&gt;$line-height&lt;/code&gt;, &lt;code&gt;$content-width&lt;/code&gt; and &lt;code&gt;$container-width&lt;/code&gt;. Last but not least, I can use these values in my CSS.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// base
+
+@import &quot;settings&quot;;
+
+@import &quot;library/type-set&quot;;
+
+@import &quot;foundations/type-system&quot;;
+
+@include type-set();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally, I call the &lt;code&gt;type-set&lt;/code&gt; mixin. And there we have it. No longer do I have to define arbitrary breakpoints based on my own assumptions. Using this method, my breakpoints are calculated using a theory, which is always going to beat my own personal judgement. The example provided here is a dumbed down version of the method used on my site, so I recommend you checkout &lt;a href=&quot;https://github.com/OliverJAsh/oliverash.me&quot;&gt;the code for this website over on GitHub&lt;/a&gt; if you want to learn more about how I'm doing it.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Img_4333</title>
+      <link>http://oliverash.me//2012/07/29/IMG_4333.html</link>
+      <pubDate>2012-07-29T00:00:00+01:00</pubDate>
+      <guid>/2012/07/29/IMG_4333</guid>
+      <description>
+      
+      
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Let&rsquo;s grab life by the throat<span class="b2-break"> and then live it to pieces.</span></title>
+      <link>http://oliverash.me//2012/07/15/lets-grab-life-by-the-throat-and-then-live-it-to-pieces.html</link>
+      <pubDate>2012-07-15T00:00:00+01:00</pubDate>
+      <guid>/2012/07/15/lets-grab-life-by-the-throat-and-then-live-it-to-pieces</guid>
+      <description>
+      
+      &lt;p&gt;I have always been incredibly fascinated by nature, science, language, math&amp;hellip; the list goes on. But, you only get one life, which is something I find a great shame.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m happy with the path I chose, but every so often I am reminded of how disconnected we all are from the other things this life has got offer. After all, though, we are only human. But we live in communities, each of us trying to support ourselves and our families. By this nature, we are self-centred creatures.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s me, doing my thing, whilst others die of starvation. But what can I do? Life is something you should grab by the throat. There&amp;rsquo;s not enough time to fulfil every single inner ambition, and we have limits - time, physical ability, mental ability, to name but a few. Hell, my brain could never comprehend all of the chemistry and biology which I am fascinated by. Unfortunately, I just wasn&amp;rsquo;t born that way. So, you have to grab life by the throat, and then live it to pieces. Make the best of what you&amp;rsquo;ve got because it&amp;rsquo;s all you&amp;rsquo;ll ever have, and you only have one life.&lt;/p&gt;
+
+&lt;p&gt;And to put things into perspective, those opportunities are bound to Earth. Our rocky, little planet. I think if you perceive yourself as a &amp;ldquo;person&amp;rdquo; in a community of people, your imagination is trapped.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;re actually much less than that. I am just a spec of dust. Putting things into perspective like this has made me something of a life enthusiast. If we can grasp exactly what we are, then maybe each of us can discover the essence of our beings.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Img_4411</title>
+      <link>http://oliverash.me//2012/06/24/IMG_4411.html</link>
+      <pubDate>2012-06-24T00:00:00+01:00</pubDate>
+      <guid>/2012/06/24/IMG_4411</guid>
+      <description>
+      
+      
+
+      </description>
+    </item>
+    
+  </channel>
+
+</rss>

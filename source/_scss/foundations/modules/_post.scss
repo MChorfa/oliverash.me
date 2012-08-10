@@ -14,7 +14,9 @@
 
   .post-time,
   .post-excerpt-permalink {
-    @extend .centered-text;
+    @extend .centered-text, %primary-heading-font-stack;
+    font-style: italic;
+    font-weight: 700;
   }
 }
 

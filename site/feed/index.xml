@@ -13,7 +13,7 @@
     <atom:link href="http://oliverash.me/feed/" rel="self" type="application/rss+xml" />
     <link>http://oliverash.me/</link>
     <description>Personal writing, work and photography</description>
-    <lastBuildDate>2012-08-07T19:43:42+01:00</lastBuildDate>
+    <lastBuildDate>2012-08-10T16:37:32+01:00</lastBuildDate>
     <language>en</language>
     <copyright>Copyright Jack Brewer</copyright>
 
@@ -131,7 +131,7 @@ $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
     </item>
     
     <item>
-      <title>Img_4333</title>
+      <title>IMG_4333</title>
       <link>http://oliverash.me//2012/07/29/IMG_4333.html</link>
       <pubDate>2012-07-29T00:00:00+01:00</pubDate>
       <guid>/2012/07/29/IMG_4333</guid>
@@ -161,7 +161,7 @@ $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
     </item>
     
     <item>
-      <title>Img_4411</title>
+      <title>IMG_4411</title>
       <link>http://oliverash.me//2012/06/24/IMG_4411.html</link>
       <pubDate>2012-06-24T00:00:00+01:00</pubDate>
       <guid>/2012/06/24/IMG_4411</guid>

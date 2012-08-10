@@ -8,11 +8,11 @@ title: Arbitrary Breakpoints vs. Robots
 No matter how hard I try, I will never consider myself to be a good designer. Rather, I consider myself to have a working knowledge of best UX practices, and as much as I love and appreciate the principles of UX design &mdash; especially responsive concerns such as content choreography &mdash; I'm just no good when it comes to piecing together a design. All that said, I wanted my blog to be a place where I would feel comfortable with my writing. The fundamental criterion of this design was to hold together various types of content in one place: personal writing, my work and my photography.
 
 The reading experience of people who come here is incredibly important to me, as a typography lover myself. I don't trust myself to make those designs, and fortunately I was able to rest on the shoulders of giants &mdash; or should I say, maths &mdash; to achieve a reading experience I would consider optimal. Call me crazy.
+{% endexcerpt %}
 
 ## Golden Ratio Typography
 
 Ever since I read about a theory that uses [the golden ratio to calculate optimal typography](http://www.pearsonified.com/2011/12/golden-ratio-typography.php), my appreciation of print design has been taken to a whole new level. In all of my previous projects I had either defined a relative line height (read: 1.5) for my typography or applied my [typography to a baseline to maintain a vertical rhythm](http://www.alistapart.com/articles/settingtypeontheweb/). Seeing all of my columns line up perfectly was damn pleasing for the nerd inside of me. However, two columns of text, each with different font sizes but equal in line-height; this probably isn't going to provide the user with an optimal reading experience.
-{% endexcerpt %}
 
 In print media, the line height is determined by the content width. Take a narrow column of text; the eye doesn't have to travel so far at the end of a line to get to the start of the new line. It is for this reason I believe the line height of text should be determined by the width of the column. You would think that setting relative line heights and then increasing the font size for wider screens would be enough, but if the content width of your column stays the same, then your line height is most likely going to need to be changed as well - if you care about your users reading experience. Relative line heights are easy, and truthfully doing it this way is a pain (especially on responsive builds), but it's definitely something worth considering.
 

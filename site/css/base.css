@@ -1,3 +1,42 @@
+/* line 1, ../_scss/foundations/placeholders/_styled-list.scss */
+.nav-list, .l-archived-posts {
+  list-style: none;
+  padding-left: 0; }
+
+/* line 1, ../_scss/foundations/placeholders/_horizontal-list.scss */
+.nav-list {
+  *zoom: 1; }
+  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .nav-list:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 5, ../_scss/foundations/placeholders/_horizontal-list.scss */
+  .nav-list li {
+    display: inline; }
+
+/* line 1, ../_scss/foundations/placeholders/_centered.scss */
+.post-content, .l-container {
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 1, ../_scss/foundations/placeholders/_typography.scss */
+body {
+  font-family: ff-meta-serif-web-pro, "Lucida Bright", Constantia, Georgia, serif; }
+
+/* line 5, ../_scss/foundations/placeholders/_typography.scss */
+h1, .h1,
+h2,
+.h2, .post .post-time,
+.post .post-excerpt-permalink {
+  font-family: abril-display, Palatino, Georgia, serif; }
+
+/* line 9, ../_scss/foundations/placeholders/_typography.scss */
+h3, .h3,
+h4,
+.h4 {
+  font-family: proxima-nova-sc-osf, "Proxima Nova SC OSF", "Proxima Nova", sans-serif; }
+
 /* line 15, ../_scss/foundations/_reset.scss */
 h1, .h1,
 h2,
@@ -464,67 +503,44 @@ table {
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: utopia-std, "Utopia Std", Georgia, serif;
+  font-weight: 500;
   color: black; }
-  /* line 7, ../_scss/foundations/_typography.scss */
+  /* line 8, ../_scss/foundations/_typography.scss */
   body a {
     color: steelBlue; }
 
-/* line 12, ../_scss/foundations/_typography.scss */
+/* line 13, ../_scss/foundations/_typography.scss */
 a {
   text-decoration: none; }
-  /* line 15, ../_scss/foundations/_typography.scss */
+  /* line 16, ../_scss/foundations/_typography.scss */
   a:hover {
     text-decoration: underline; }
 
-/* line 24, ../_scss/foundations/_typography.scss */
+/* line 25, ../_scss/foundations/_typography.scss */
 h1, .h1,
 h2,
 .h2 {
-  font-weight: 400; }
+  font-weight: 600; }
 
-/* line 29, ../_scss/foundations/_typography.scss */
+/* line 31, ../_scss/foundations/_typography.scss */
 h3, .h3,
 h4,
 .h4 {
-  font-family: proxima-nova-sc-osf, "Proxima Nova SC OSF", "Proxima Nova", sans-serif;
   letter-spacing: 2px;
   font-weight: 400; }
 
-/* line 35, ../_scss/foundations/_typography.scss */
+/* line 37, ../_scss/foundations/_typography.scss */
 h3, .h3 {
   text-transform: uppercase; }
 
-/* line 39, ../_scss/foundations/_typography.scss */
+/* line 41, ../_scss/foundations/_typography.scss */
 h4, .h4 {
   text-transform: lowercase; }
 
-/* line 43, ../_scss/foundations/_typography.scss */
+/* line 45, ../_scss/foundations/_typography.scss */
 .centered-text, .post .post-time,
 .post .post-excerpt-permalink {
   text-align: center; }
-
-/* line 1, ../_scss/foundations/placeholders/_styled-list.scss */
-.nav-list, .l-archived-posts {
-  list-style: none;
-  padding-left: 0; }
-
-/* line 1, ../_scss/foundations/placeholders/_horizontal-list.scss */
-.nav-list {
-  *zoom: 1; }
-  /* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  .nav-list:after {
-    content: "";
-    display: table;
-    clear: both; }
-  /* line 5, ../_scss/foundations/placeholders/_horizontal-list.scss */
-  .nav-list li {
-    display: inline; }
-
-/* line 1, ../_scss/foundations/placeholders/_centered.scss */
-.post-content, .l-container {
-  margin-left: auto;
-  margin-right: auto; }
 
 /* line 1, ../_scss/foundations/modules/_nav-list.scss */
 .nav-list {
@@ -549,14 +565,19 @@ h4, .h4 {
   .post .post-image {
     display: block;
     width: 100%; }
+  /* line 16, ../_scss/foundations/modules/_post.scss */
+  .post .post-time,
+  .post .post-excerpt-permalink {
+    font-style: italic;
+    font-weight: 700; }
 
-/* line 21, ../_scss/foundations/modules/_post.scss */
+/* line 23, ../_scss/foundations/modules/_post.scss */
 .post-content {
   text-align: justify; }
-  /* line 25, ../_scss/foundations/modules/_post.scss */
+  /* line 27, ../_scss/foundations/modules/_post.scss */
   .post-content h1, .post-content .h1 {
     text-align: center; }
-  /* line 29, ../_scss/foundations/modules/_post.scss */
+  /* line 31, ../_scss/foundations/modules/_post.scss */
   .post-content img {
     max-width: 100%; }
 
@@ -620,31 +641,31 @@ pre {
     margin-bottom: 28.838px;
     width: 240px; }
 
-/* line 20, ../_scss/base.scss */
+/* line 23, ../_scss/base.scss */
 body {
   min-width: 320px;
   background-color: #1a1a1a; }
 
-/* line 28, ../_scss/base.scss */
+/* line 31, ../_scss/base.scss */
 nav > h1, nav > .h1 {
   display: none; }
 
-/* line 38, ../_scss/base.scss */
+/* line 41, ../_scss/base.scss */
 .l-header, .l-header a {
   color: white; }
 
-/* line 43, ../_scss/base.scss */
+/* line 46, ../_scss/base.scss */
 .l-header-logo {
   text-align: center; }
-  /* line 46, ../_scss/base.scss */
+  /* line 49, ../_scss/base.scss */
   .l-header-logo a:hover {
     text-decoration: none; }
 
-/* line 52, ../_scss/base.scss */
+/* line 55, ../_scss/base.scss */
 .l-footer, .l-footer a {
   color: gray; }
 
-/* line 61, ../_scss/base.scss */
+/* line 64, ../_scss/base.scss */
 pre {
   background: ghostWhite;
   border: 1px solid #e6e6e6; }

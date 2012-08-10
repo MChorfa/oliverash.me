@@ -1,7 +1,8 @@
 body {
+  @extend %primary-font-stack;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: utopia-std, "Utopia Std", Georgia, serif;
+  font-weight: 500;
   color: black;
 
   a {
@@ -22,12 +23,13 @@ a {
 
 h1,
 h2 {
-  font-weight: 400;
+  @extend %primary-heading-font-stack;
+  font-weight: 600;
 }
 
 h3,
 h4 {
-  font-family: proxima-nova-sc-osf, "Proxima Nova SC OSF", "Proxima Nova", sans-serif;
+  @extend %secondary-heading-font-stack;
   letter-spacing: 2px;
   font-weight: 400;
 }

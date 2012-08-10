@@ -5,13 +5,16 @@
 // We don't want desktop styles, so we fix breakpoints at 320px.
 $fix-breakpoint: 320px;
 
+@import "foundations/placeholders/styled-list";
+@import "foundations/placeholders/horizontal-list";
+@import "foundations/placeholders/centered";
+@import "foundations/placeholders/typography";
+
 @import "foundations/reset";
 @import "foundations/normalise";
 @import "foundations/typography";
 @import "foundations/type-system";
-@import "foundations/placeholders/styled-list";
-@import "foundations/placeholders/horizontal-list";
-@import "foundations/placeholders/centered";
+
 @import "foundations/modules/nav-list";
 @import "foundations/modules/post";
 

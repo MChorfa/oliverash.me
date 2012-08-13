@@ -13,10 +13,21 @@
     <atom:link href="http://oliverash.me/feed/" rel="self" type="application/rss+xml" />
     <link>http://oliverash.me/</link>
     <description>Personal writing, work and photography</description>
-    <lastBuildDate>2012-08-10T16:37:32+01:00</lastBuildDate>
+    <lastBuildDate>2012-08-13T19:39:18+01:00</lastBuildDate>
     <language>en</language>
     <copyright>Copyright Jack Brewer</copyright>
 
+    
+    <item>
+      <title>IMG_4336</title>
+      <link>http://oliverash.me//2012/08/13/IMG_4336.html</link>
+      <pubDate>2012-08-13T00:00:00+01:00</pubDate>
+      <guid>/2012/08/13/IMG_4336</guid>
+      <description>
+      
+
+      </description>
+    </item>
     
     <item>
       <title>Arbitrary Breakpoints vs. Robots</title>

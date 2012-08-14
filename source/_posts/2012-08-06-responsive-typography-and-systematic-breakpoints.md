@@ -1,7 +1,7 @@
 ---
 tags: ['Promoted']
 layout: post
-title: Arbitrary Breakpoints vs. Robots
+title: Responsive Typography and Systematic Breakpoints
 ---
 
 {% excerpt %}

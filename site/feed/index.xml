@@ -13,7 +13,7 @@
     <atom:link href="http://oliverash.me/feed/" rel="self" type="application/rss+xml" />
     <link>http://oliverash.me/</link>
     <description>Personal writing, work and photography</description>
-    <lastBuildDate>2012-08-14T19:17:16+01:00</lastBuildDate>
+    <lastBuildDate>2012-08-14T19:18:52+01:00</lastBuildDate>
     <language>en</language>
     <copyright>Copyright Jack Brewer</copyright>
 
@@ -158,10 +158,10 @@ $sports-primary-color: green;
     </item>
     
     <item>
-      <title>Arbitrary Breakpoints vs. Robots</title>
-      <link>http://oliverash.me//2012/08/06/arbitrary-breakpoints-vs-robots.html</link>
+      <title>Responsive Typography and Systematic Breakpoints</title>
+      <link>http://oliverash.me//2012/08/06/responsive-typography-and-systematic-breakpoints.html</link>
       <pubDate>2012-08-06T00:00:00+01:00</pubDate>
-      <guid>/2012/08/06/arbitrary-breakpoints-vs-robots</guid>
+      <guid>/2012/08/06/responsive-typography-and-systematic-breakpoints</guid>
       <description>
       &lt;p&gt;No matter how hard I try, I will never consider myself to be a good designer. Rather, I consider myself to have a working knowledge of best UX practices, and as much as I love and appreciate the principles of UX design &amp;mdash; especially responsive concerns such as content choreography &amp;mdash; I'm just no good when it comes to piecing together a design. All that said, I wanted my blog to be a place where I would feel comfortable with my writing. The fundamental criterion of this design was to hold together various types of content in one place: personal writing, my work and my photography.&lt;/p&gt;
 

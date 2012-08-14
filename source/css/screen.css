@@ -31,27 +31,31 @@
     display: block; }
 
   /* line 34, ../_scss/foundations/_type-system.scss */
+  .b0-non-break {
+    display: inline; }
+
+  /* line 38, ../_scss/foundations/_type-system.scss */
   .l-container {
     max-width: 304px; }
 
-  /* line 38, ../_scss/foundations/_type-system.scss */
+  /* line 42, ../_scss/foundations/_type-system.scss */
   .island {
     padding-right: 16px;
     padding-left: 16px; }
 
-  /* line 45, ../_scss/foundations/_type-system.scss */
+  /* line 49, ../_scss/foundations/_type-system.scss */
   .post-content {
     width: 240px;
     margin-top: 68.144px;
     margin-bottom: 68.144px; }
-    /* line 61, ../_scss/foundations/_type-system.scss */
+    /* line 65, ../_scss/foundations/_type-system.scss */
     .post-content h1, .post-content .h1 {
       font-size: 28px;
       line-height: 37.664px;
       margin-top: 37.664px;
       margin-bottom: 37.664px;
       width: 240px; }
-    /* line 65, ../_scss/foundations/_type-system.scss */
+    /* line 69, ../_scss/foundations/_type-system.scss */
     .post-content h2, .post-content .h2 {
       font-size: 21px;
       line-height: 28.838px;
@@ -91,28 +95,32 @@
     display: block; }
 
   /* line 34, ../_scss/foundations/_type-system.scss */
+  .b1-non-break {
+    display: inline; }
+
+  /* line 38, ../_scss/foundations/_type-system.scss */
   .l-container {
     max-width: 456px; }
 
-  /* line 38, ../_scss/foundations/_type-system.scss */
+  /* line 42, ../_scss/foundations/_type-system.scss */
   .island {
     padding-right: 16px;
     padding-left: 16px; }
 
-  /* line 45, ../_scss/foundations/_type-system.scss */
+  /* line 49, ../_scss/foundations/_type-system.scss */
   .post-content {
     width: 376px;
     margin-top: 71.154px;
     margin-bottom: 71.154px;
     text-align: left; }
-    /* line 61, ../_scss/foundations/_type-system.scss */
+    /* line 65, ../_scss/foundations/_type-system.scss */
     .post-content h1, .post-content .h1 {
       font-size: 28px;
       line-height: 38.238px;
       margin-top: 38.238px;
       margin-bottom: 38.238px;
       width: 376px; }
-    /* line 65, ../_scss/foundations/_type-system.scss */
+    /* line 69, ../_scss/foundations/_type-system.scss */
     .post-content h2, .post-content .h2 {
       font-size: 21px;
       line-height: 29.603px;
@@ -152,27 +160,31 @@
     display: block; }
 
   /* line 34, ../_scss/foundations/_type-system.scss */
+  .b2-non-break {
+    display: inline; }
+
+  /* line 38, ../_scss/foundations/_type-system.scss */
   .l-container {
     max-width: 817.38px; }
 
-  /* line 38, ../_scss/foundations/_type-system.scss */
+  /* line 42, ../_scss/foundations/_type-system.scss */
   .island {
     padding-right: 16px;
     padding-left: 16px; }
 
-  /* line 45, ../_scss/foundations/_type-system.scss */
+  /* line 49, ../_scss/foundations/_type-system.scss */
   .post-content {
     width: 685px;
     margin-top: 78px;
     margin-bottom: 78px; }
-    /* line 61, ../_scss/foundations/_type-system.scss */
+    /* line 65, ../_scss/foundations/_type-system.scss */
     .post-content h1, .post-content .h1 {
       font-size: 42px;
       line-height: 56.904px;
       margin-top: 56.904px;
       margin-bottom: 56.904px;
       width: 685px; }
-    /* line 65, ../_scss/foundations/_type-system.scss */
+    /* line 69, ../_scss/foundations/_type-system.scss */
     .post-content h2, .post-content .h2 {
       font-size: 26px;
       line-height: 37.144px;
@@ -212,27 +224,31 @@
     display: block; }
 
   /* line 34, ../_scss/foundations/_type-system.scss */
+  .b3-non-break {
+    display: inline; }
+
+  /* line 38, ../_scss/foundations/_type-system.scss */
   .l-container {
     max-width: 986.1px; }
 
-  /* line 38, ../_scss/foundations/_type-system.scss */
+  /* line 42, ../_scss/foundations/_type-system.scss */
   .island {
     padding-right: 18px;
     padding-left: 18px; }
 
-  /* line 45, ../_scss/foundations/_type-system.scss */
+  /* line 49, ../_scss/foundations/_type-system.scss */
   .post-content {
     width: 829px;
     margin-top: 87px;
     margin-bottom: 87px; }
-    /* line 61, ../_scss/foundations/_type-system.scss */
+    /* line 65, ../_scss/foundations/_type-system.scss */
     .post-content h1, .post-content .h1 {
       font-size: 47px;
       line-height: 63.606px;
       margin-top: 63.606px;
       margin-bottom: 63.606px;
       width: 829px; }
-    /* line 65, ../_scss/foundations/_type-system.scss */
+    /* line 69, ../_scss/foundations/_type-system.scss */
     .post-content h2, .post-content .h2 {
       font-size: 29px;
       line-height: 41.336px;
@@ -272,27 +288,31 @@
     display: block; }
 
   /* line 34, ../_scss/foundations/_type-system.scss */
+  .b4-non-break {
+    display: inline; }
+
+  /* line 38, ../_scss/foundations/_type-system.scss */
   .l-container {
     max-width: 1169.64px; }
 
-  /* line 38, ../_scss/foundations/_type-system.scss */
+  /* line 42, ../_scss/foundations/_type-system.scss */
   .island {
     padding-right: 20px;
     padding-left: 20px; }
 
-  /* line 45, ../_scss/foundations/_type-system.scss */
+  /* line 49, ../_scss/foundations/_type-system.scss */
   .post-content {
     width: 986px;
     margin-top: 96px;
     margin-bottom: 96px; }
-    /* line 61, ../_scss/foundations/_type-system.scss */
+    /* line 65, ../_scss/foundations/_type-system.scss */
     .post-content h1, .post-content .h1 {
       font-size: 52px;
       line-height: 70.307px;
       margin-top: 70.307px;
       margin-bottom: 70.307px;
       width: 986px; }
-    /* line 65, ../_scss/foundations/_type-system.scss */
+    /* line 69, ../_scss/foundations/_type-system.scss */
     .post-content h2, .post-content .h2 {
       font-size: 32px;
       line-height: 45.525px;

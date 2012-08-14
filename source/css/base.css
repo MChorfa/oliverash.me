@@ -613,27 +613,31 @@ pre {
   display: block; }
 
 /* line 34, ../_scss/foundations/_type-system.scss */
+.b0-non-break {
+  display: inline; }
+
+/* line 38, ../_scss/foundations/_type-system.scss */
 .l-container {
   max-width: 304px; }
 
-/* line 38, ../_scss/foundations/_type-system.scss */
+/* line 42, ../_scss/foundations/_type-system.scss */
 .island {
   padding-right: 16px;
   padding-left: 16px; }
 
-/* line 45, ../_scss/foundations/_type-system.scss */
+/* line 49, ../_scss/foundations/_type-system.scss */
 .post-content {
   width: 240px;
   margin-top: 68.144px;
   margin-bottom: 68.144px; }
-  /* line 61, ../_scss/foundations/_type-system.scss */
+  /* line 65, ../_scss/foundations/_type-system.scss */
   .post-content h1, .post-content .h1 {
     font-size: 28px;
     line-height: 37.664px;
     margin-top: 37.664px;
     margin-bottom: 37.664px;
     width: 240px; }
-  /* line 65, ../_scss/foundations/_type-system.scss */
+  /* line 69, ../_scss/foundations/_type-system.scss */
   .post-content h2, .post-content .h2 {
     font-size: 21px;
     line-height: 28.838px;

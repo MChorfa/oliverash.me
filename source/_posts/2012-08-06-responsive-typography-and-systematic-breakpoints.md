@@ -1,7 +1,7 @@
 ---
 tags: ['Promoted']
 layout: post
-title: Responsive Typography and Systematic Breakpoints
+title: Responsive Typography and<span class="b1-break"> Systematic Breakpoints</span>
 ---
 
 {% excerpt %}

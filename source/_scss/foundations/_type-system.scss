@@ -31,6 +31,10 @@
     display: block;
   }
 
+  .b#{$index}-non-break {
+    display: inline;
+  }
+
   .l-container {
     max-width: $container-width;
   }

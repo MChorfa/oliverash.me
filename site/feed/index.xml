@@ -13,10 +13,138 @@
     <atom:link href="http://oliverash.me/feed/" rel="self" type="application/rss+xml" />
     <link>http://oliverash.me/</link>
     <description>Personal writing, work and photography</description>
-    <lastBuildDate>2012-08-13T19:39:18+01:00</lastBuildDate>
+    <lastBuildDate>2012-08-14T18:41:29+01:00</lastBuildDate>
     <language>en</language>
     <copyright>Copyright Jack Brewer</copyright>
 
+    
+    <item>
+      <title>Theming with CSS Pre-processors</title>
+      <link>http://oliverash.me//2012/08/14/theming-with-css-pre-processors.html</link>
+      <pubDate>2012-08-14T00:00:00+01:00</pubDate>
+      <guid>/2012/08/14/theming-with-css-pre-processors</guid>
+      <description>
+      &lt;p&gt;One thing that CSS Pre-processors really help with is maintaining large colour schemes. Sometimes, however, we need not just a large colour palette, but multiple colour schemes. If a colour is used sparingly across a design, CSS pre-processors can help a great deal with swapping out that lick of paint with a new one.&lt;/p&gt;
+
+&lt;p&gt;In a recent project I was confronted with a design that used a primary colour simply for text and borders. The design demonstrated that different sections of the website would have the same layout, but a different primary colour for its text and borders.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.articles-list {
+  border-bottom: 1px solid blue;
+}
+
+.articles-list .article-title {
+  color: blue;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I'm sure we all know that pre-processors can improve the situation here with variables.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$primary-colour: blue;
+
+.articles-list {
+  border-bottom: 1px solid $primary-colour;
+}
+
+.articles-list .article-title {
+  color: $primary-colour;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I can theme the website by using a &lt;code&gt;body&lt;/code&gt; class to specify the active theme.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/*body*/.default {
+  $primary-colour: blue;
+
+  .articles-list {
+    border-bottom: 1px solid $primary-colour;
+  }
+
+  .articles-list .article-title {
+    color: $primary-colour;
+  }
+}
+
+/*body*/.sports {
+  $primary-colour: green;
+
+  .articles-list {
+    border-bottom: 1px solid $primary-colour;
+  }
+
+  .articles-list .article-title {
+    color: $primary-colour;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is powerful because, simply by changing the class on the &lt;code&gt;body&lt;/code&gt; element, we have the ability to change a whole website's colour scheme. However, the disadvantage of our CSS is that I have to keep my colour styles separate from the rest of my style properties. Unfortunately, if I wanted all styles using &lt;code&gt;$primary-colour&lt;/code&gt; to change with the body class, pre-processors aren't clever enough to automatically generate my CSS.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$primary-colour: blue;
+
+/*body*/.sports {
+  $primary-colour: green;
+}
+
+.articles-list {
+  border-bottom: 1px solid $primary-colour;
+}
+
+.articles-list .article-title {
+  color: $primary-colour;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Because of this, the compiled CSS would only provide styles for the default theme.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.articles-list {
+  border-bottom: 1px solid blue;
+}
+
+.articles-list .article-title {
+  color: blue;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A clever way of achieving what we want here is to use the &lt;a href=&quot;http://designshack.net/articles/css/extends-and-control-directives-two-crazy-things-sass-can-do-that-less-cant/&quot;&gt;&lt;code&gt;@extend&lt;/code&gt;&lt;/a&gt; method which is available in most pre-processors (Sass and Stylus at the time of writing) alongside &lt;a href=&quot;http://thesassway.com/intermediate/referencing-parent-selectors-using-ampersand&quot;&gt;parent selectors&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$default-primary-color: blue;
+$sports-primary-color: green;
+
+%brand-border-colour {
+  .default &amp;amp; {
+    border-color: $default-primary-colour;
+  }
+
+  .sports &amp;amp; {
+    border-color: $sports-primary-colour;
+  }
+}
+
+%brand-colour {
+  .default &amp;amp; {
+    color: $default-primary-colour;
+  }
+
+  .sports &amp;amp; {
+    colour: $sports-primary-colour;
+  }
+}
+
+.articles-list {
+  @extend %brand-border-colour;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.articles-list .article-title {
+  @extend %brand-colour;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This way we get to keep all of our colour styles with the rest of our styles.&lt;/p&gt;
+
+      </description>
+    </item>
     
     <item>
       <title>IMG_4336</title>
@@ -49,7 +177,7 @@
 
 &lt;h2&gt;Doing the Math&lt;/h2&gt;
 
-&lt;p&gt;Fortunately, there is a &lt;a href=&quot;http://www.pearsonified.com/typography/&quot;&gt;calculator online&lt;/a&gt; for you to run through some tests and have a go for yourself. However, being a devotee of CSS preprocessors, I chose to leave these calculations until run time for maintainability reasons.&lt;/p&gt;
+&lt;p&gt;Fortunately, there is a &lt;a href=&quot;http://www.pearsonified.com/typography/&quot;&gt;calculator online&lt;/a&gt; for you to run through some tests and have a go for yourself. However, being a devotee of CSS pre-processors, I chose to leave these calculations until run time for maintainability reasons.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;// settings
 

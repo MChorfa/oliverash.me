@@ -20,7 +20,7 @@ With all relative font sizes now gone, I chose to let the type design itself. Th
 
 ## Doing the Math
 
-Fortunately, there is a [calculator online](http://www.pearsonified.com/typography/) for you to run through some tests and have a go for yourself. However, being a devotee of CSS preprocessors, I chose to leave these calculations until run time for maintainability reasons.
+Fortunately, there is a [calculator online](http://www.pearsonified.com/typography/) for you to run through some tests and have a go for yourself. However, being a devotee of CSS pre-processors, I chose to leave these calculations until run time for maintainability reasons.
 
     // settings
 

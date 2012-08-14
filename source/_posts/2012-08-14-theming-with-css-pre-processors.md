@@ -105,7 +105,7 @@ A clever way of achieving what we want here is to use the [`@extend`](http://des
       }
 
       .sports & {
-        colour: $sports-primary-colour;
+        color: $sports-primary-colour;
       }
     }
 

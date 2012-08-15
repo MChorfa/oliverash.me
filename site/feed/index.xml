@@ -13,18 +13,19 @@
     <atom:link href="http://oliverash.me/feed/" rel="self" type="application/rss+xml" />
     <link>http://oliverash.me/</link>
     <description>Personal writing, work and photography</description>
-    <lastBuildDate>2012-08-14T19:24:21+01:00</lastBuildDate>
+    <lastBuildDate>2012-08-15T14:09:42+01:00</lastBuildDate>
     <language>en</language>
-    <copyright>Copyright Jack Brewer</copyright>
+    <copyright>Copyright Oliver Joseph Ash</copyright>
 
     
     <item>
-      <title>Theming with CSS<span class="b1-break b2-non-break"> Pre-processors</title>
+      <title>Theming with CSS Pre-processors</title>
       <link>http://oliverash.me//2012/08/14/theming-with-css-pre-processors.html</link>
       <pubDate>2012-08-14T00:00:00+01:00</pubDate>
       <guid>/2012/08/14/theming-with-css-pre-processors</guid>
       <description>
-      &lt;p&gt;One thing that CSS Pre-processors really help with is maintaining large colour schemes. Sometimes, however, we need not just a large colour palette, but multiple colour schemes. If a colour is used sparingly across a design, CSS pre-processors can help a great deal with swapping out that lick of paint with a new one.&lt;/p&gt;
+      
+        &lt;p&gt;One thing that CSS Pre-processors really help with is maintaining large colour schemes. Sometimes, however, we need not just a large colour palette, but multiple colour schemes. If a colour is used sparingly across a design, CSS pre-processors can help a great deal with swapping out that lick of paint with a new one.&lt;/p&gt;
 
 &lt;p&gt;In a recent project I was confronted with a design that used a primary colour simply for text and borders. The design demonstrated that different sections of the website would have the same layout, but a different primary colour for its text and borders.&lt;/p&gt;
 
@@ -143,6 +144,7 @@ $sports-primary-color: green;
 
 &lt;p&gt;This way we get to keep all of our colour styles with the rest of our styles.&lt;/p&gt;
 
+      
       </description>
     </item>
     
@@ -153,17 +155,19 @@ $sports-primary-color: green;
       <guid>/2012/08/13/IMG_4336</guid>
       <description>
       
-
+        &lt;img class=&quot;post-image&quot; src=&quot;http://farm8.staticflickr.com/7234/7172515397_baf9eb7c36_b.jpg&quot; alt=&quot;&quot;&gt;
+      
       </description>
     </item>
     
     <item>
-      <title>Responsive Typography and<span class="b1-break"> Systematic Breakpoints</span></title>
+      <title>Responsive Typography and Systematic Breakpoints</title>
       <link>http://oliverash.me//2012/08/06/responsive-typography-and-systematic-breakpoints.html</link>
       <pubDate>2012-08-06T00:00:00+01:00</pubDate>
       <guid>/2012/08/06/responsive-typography-and-systematic-breakpoints</guid>
       <description>
-      &lt;p&gt;No matter how hard I try, I will never consider myself to be a good designer. Rather, I consider myself to have a working knowledge of best UX practices, and as much as I love and appreciate the principles of UX design &amp;mdash; especially responsive concerns such as content choreography &amp;mdash; I'm just no good when it comes to piecing together a design. All that said, I wanted my blog to be a place where I would feel comfortable with my writing. The fundamental criterion of this design was to hold together various types of content in one place: personal writing, my work and my photography.&lt;/p&gt;
+      
+        &lt;p&gt;No matter how hard I try, I will never consider myself to be a good designer. Rather, I consider myself to have a working knowledge of best UX practices, and as much as I love and appreciate the principles of UX design &amp;mdash; especially responsive concerns such as content choreography &amp;mdash; I'm just no good when it comes to piecing together a design. All that said, I wanted my blog to be a place where I would feel comfortable with my writing. The fundamental criterion of this design was to hold together various types of content in one place: personal writing, my work and my photography.&lt;/p&gt;
 
 &lt;p&gt;The reading experience of people who come here is incredibly important to me, as a typography lover myself. I don't trust myself to make those designs, and fortunately I was able to rest on the shoulders of giants &amp;mdash; or should I say, maths &amp;mdash; to achieve a reading experience I would consider optimal. Call me crazy.&lt;/p&gt;
 
@@ -266,6 +270,7 @@ $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
 
 &lt;p&gt;Finally, I call the &lt;code&gt;type-set&lt;/code&gt; mixin. And there we have it. No longer do I have to define arbitrary breakpoints based on my own assumptions. Using this method, my breakpoints are calculated using a theory, which is always going to beat my own personal judgement. The example provided here is a dumbed down version of the method used on my site, so I recommend you checkout &lt;a href=&quot;https://github.com/OliverJAsh/oliverash.me&quot;&gt;the code for this website over on GitHub&lt;/a&gt; if you want to learn more about how I'm doing it.&lt;/p&gt;
 
+      
       </description>
     </item>
     
@@ -276,17 +281,19 @@ $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
       <guid>/2012/07/29/IMG_4333</guid>
       <description>
       
-
+        &lt;img class=&quot;post-image&quot; src=&quot;http://farm8.staticflickr.com/7100/7357731270_b0136c6ee4_b.jpg&quot; alt=&quot;&quot;&gt;
+      
       </description>
     </item>
     
     <item>
-      <title>Let&rsquo;s grab life by the throat<span class="b2-break"> and then live it to pieces.</span></title>
+      <title>Let&amp;rsquo;s grab life by the throat and then live it to pieces.</title>
       <link>http://oliverash.me//2012/07/15/lets-grab-life-by-the-throat-and-then-live-it-to-pieces.html</link>
       <pubDate>2012-07-15T00:00:00+01:00</pubDate>
       <guid>/2012/07/15/lets-grab-life-by-the-throat-and-then-live-it-to-pieces</guid>
       <description>
-      &lt;p&gt;I have always been incredibly fascinated by nature, science, language, math&amp;hellip; the list goes on. But, you only get one life, which is something I find a great shame.&lt;/p&gt;
+      
+        &lt;p&gt;I have always been incredibly fascinated by nature, science, language, math&amp;hellip; the list goes on. But, you only get one life, which is something I find a great shame.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m happy with the path I chose, but every so often I am reminded of how disconnected we all are from the other things this life has got offer. After all, though, we are only human. But we live in communities, each of us trying to support ourselves and our families. By this nature, we are self-centred creatures.&lt;/p&gt;
 
@@ -296,6 +303,7 @@ $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
 
 &lt;p&gt;We&amp;rsquo;re actually much less than that. I am just a spec of dust. Putting things into perspective like this has made me something of a life enthusiast. If we can grasp exactly what we are, then maybe each of us can discover the essence of our beings.&lt;/p&gt;
 
+      
       </description>
     </item>
     
@@ -306,7 +314,8 @@ $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
       <guid>/2012/06/24/IMG_4411</guid>
       <description>
       
-
+        &lt;img class=&quot;post-image&quot; src=&quot;http://farm6.staticflickr.com/5329/7434684282_62b4c9635a_b.jpg&quot; alt=&quot;&quot;&gt;
+      
       </description>
     </item>
     

@@ -19,16 +19,20 @@ layout: nil
     <description>Personal writing, work and photography</description>
     <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
     <language>en</language>
-    <copyright>Copyright Jack Brewer</copyright>
+    <copyright>Copyright Oliver Joseph Ash</copyright>
 
     {% for post in site.posts limit:10 %}
     <item>
-      <title>{{ post.title }}</title>
+      <title>{{ post.title | strip_html | xml_escape }}</title>
       <link>http://oliverash.me/{{ post.url }}</link>
       <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
       <guid>{{ post.id }}</guid>
       <description>
-      {{ post.content | xml_escape }}
+      {% if post.layout == 'photo' %}
+        {{ post.image | xml_escape }}
+      {% else %}
+        {{ post.content | xml_escape }}
+      {% endif %}
       </description>
     </item>
     {% endfor %}

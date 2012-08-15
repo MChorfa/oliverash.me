@@ -23,18 +23,16 @@ layout: nil
 
     {% for post in site.posts limit:10 %}
     <item>
-      <title>{{ post.title | strip_html | xml_escape }}</title>
+      <title>{{ post.title | strip_html }}</title>
       <link>http://oliverash.me/{{ post.url }}</link>
       <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
       <guid>{{ post.id }}</guid>
       <description>
-        <![CDATA[
-          {% if post.layout == 'photo' %}
-            {{ post.image }}
-          {% else %}
-            {{ post.content }}
-          {% endif %}
-        ]]>
+      {% if post.layout == 'photo' %}
+        {{ post.image | xml_escape }}
+      {% else %}
+        {{ post.content | xml_escape }}
+      {% endif %}
       </description>
     </item>
     {% endfor %}

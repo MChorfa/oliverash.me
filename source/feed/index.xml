@@ -28,11 +28,13 @@ layout: nil
       <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
       <guid>{{ post.id }}</guid>
       <description>
-      {% if post.layout == 'photo' %}
-        {{ post.image }}
-      {% else %}
-        {{ post.content | xml_escape }}
-      {% endif %}
+        <![CDATA[
+          {% if post.layout == 'photo' %}
+            {{ post.image }}
+          {% else %}
+            {{ post.content }}
+          {% endif %}
+        ]]>
       </description>
     </item>
     {% endfor %}

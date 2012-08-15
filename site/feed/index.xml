@@ -10,10 +10,10 @@
 
   <channel>
     <title>Oliver Joseph Ash</title>
-    <atom:link href="http://oliverash.me/feed/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://oliverash.me/feed/index.xml" rel="self" type="application/rss+xml" />
     <link>http://oliverash.me/</link>
     <description>Personal writing, work and photography</description>
-    <lastBuildDate>Wed, 15 Aug 2012 15:49:06 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 15 Aug 2012 15:52:41 +0100</lastBuildDate>
     <language>en</language>
     <copyright>Copyright Oliver Joseph Ash</copyright>
 

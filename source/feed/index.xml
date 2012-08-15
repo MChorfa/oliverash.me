@@ -14,7 +14,7 @@ layout: nil
 
   <channel>
     <title>Oliver Joseph Ash</title>
-    <atom:link href="http://oliverash.me/feed/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://oliverash.me/feed/index.xml" rel="self" type="application/rss+xml" />
     <link>http://oliverash.me/</link>
     <description>Personal writing, work and photography</description>
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>

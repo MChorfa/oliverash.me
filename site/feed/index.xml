@@ -13,7 +13,7 @@
     <atom:link href="http://oliverash.me/feed/" rel="self" type="application/rss+xml" />
     <link>http://oliverash.me/</link>
     <description>Personal writing, work and photography</description>
-    <lastBuildDate>2012-08-15T15:46:42+01:00</lastBuildDate>
+    <lastBuildDate>Wed, 15 Aug 2012 15:49:06 +0100</lastBuildDate>
     <language>en</language>
     <copyright>Copyright Oliver Joseph Ash</copyright>
 
@@ -21,7 +21,7 @@
     <item>
       <title>Theming with CSS Pre-processors</title>
       <link>http://oliverash.me/2012/08/14/theming-with-css-pre-processors.html</link>
-      <pubDate>2012-08-14T00:00:00+01:00</pubDate>
+      <pubDate>Tue, 14 Aug 2012 00:00:00 +0100</pubDate>
       <guid>http://oliverash.me/2012/08/14/theming-with-css-pre-processors</guid>
       <description>
       
@@ -151,7 +151,7 @@ $sports-primary-color: green;
     <item>
       <title>IMG_4336</title>
       <link>http://oliverash.me/2012/08/13/IMG_4336.html</link>
-      <pubDate>2012-08-13T00:00:00+01:00</pubDate>
+      <pubDate>Mon, 13 Aug 2012 00:00:00 +0100</pubDate>
       <guid>http://oliverash.me/2012/08/13/IMG_4336</guid>
       <description>
       
@@ -163,7 +163,7 @@ $sports-primary-color: green;
     <item>
       <title>Responsive Typography and Systematic Breakpoints</title>
       <link>http://oliverash.me/2012/08/06/responsive-typography-and-systematic-breakpoints.html</link>
-      <pubDate>2012-08-06T00:00:00+01:00</pubDate>
+      <pubDate>Mon, 06 Aug 2012 00:00:00 +0100</pubDate>
       <guid>http://oliverash.me/2012/08/06/responsive-typography-and-systematic-breakpoints</guid>
       <description>
       
@@ -277,7 +277,7 @@ $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
     <item>
       <title>IMG_4333</title>
       <link>http://oliverash.me/2012/07/29/IMG_4333.html</link>
-      <pubDate>2012-07-29T00:00:00+01:00</pubDate>
+      <pubDate>Sun, 29 Jul 2012 00:00:00 +0100</pubDate>
       <guid>http://oliverash.me/2012/07/29/IMG_4333</guid>
       <description>
       
@@ -289,7 +289,7 @@ $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
     <item>
       <title>Let’s grab life by the throat and then live it to pieces.</title>
       <link>http://oliverash.me/2012/07/15/lets-grab-life-by-the-throat-and-then-live-it-to-pieces.html</link>
-      <pubDate>2012-07-15T00:00:00+01:00</pubDate>
+      <pubDate>Sun, 15 Jul 2012 00:00:00 +0100</pubDate>
       <guid>http://oliverash.me/2012/07/15/lets-grab-life-by-the-throat-and-then-live-it-to-pieces</guid>
       <description>
       
@@ -310,7 +310,7 @@ $type-set: 16px 320px, 16px 480px, 16px, 18px, 20px;
     <item>
       <title>IMG_4411</title>
       <link>http://oliverash.me/2012/06/24/IMG_4411.html</link>
-      <pubDate>2012-06-24T00:00:00+01:00</pubDate>
+      <pubDate>Sun, 24 Jun 2012 00:00:00 +0100</pubDate>
       <guid>http://oliverash.me/2012/06/24/IMG_4411</guid>
       <description>
       

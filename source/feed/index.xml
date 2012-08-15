@@ -29,7 +29,7 @@ layout: nil
       <guid>{{ post.id }}</guid>
       <description>
       {% if post.layout == 'photo' %}
-        {{ post.image | xml_escape }}
+        {{ post.image }}
       {% else %}
         {{ post.content | xml_escape }}
       {% endif %}

@@ -119,4 +119,4 @@ A clever way of achieving what we want here is to use the [`@extend`](http://des
       @extend %brand-colour;
     }
 
-This way we get to keep all of our colour styles with the rest of our styles.
+This way we get to keep all of our colour styles with the rest of our styles, and therefore our code is a lot more maintainable. You could also use the colour functions provided by CSS pre-processors to extend this example, but the purpose of this article is to demonstrate how you can swap out and in entire colour schemes.
